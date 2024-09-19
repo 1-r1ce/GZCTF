@@ -32,7 +32,7 @@
   margin-left: 20px;
   font-weight: 500;
   color: var(--mantine-color-light-0);
-  background-color: #0066ff;
+  background-color: #0066CC;
 
   /* @mixin dark {
     background-color: darken(var(--mantine-primary-color-8), 0.45);
