@@ -13,6 +13,8 @@ RUN apt update && apt install -y wget gnupg2 libpcap0.8 && \
 
 RUN npm i -g pnpm
 
+RUN pnpm config set registry https://registry.npmmirror.com
+
 COPY [".", "/src"]
 
 WORKDIR "/src/GZCTF"
