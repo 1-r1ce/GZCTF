@@ -190,7 +190,7 @@ const Register: FC = () => {
         sx={(theme) => ({
           fontSize: theme.fontSizes.xs,
           alignSelf: 'end',
-          color: '#0066ff'
+          color: '#0066CC'
         })}
         component={Link}
         to="/account/login"

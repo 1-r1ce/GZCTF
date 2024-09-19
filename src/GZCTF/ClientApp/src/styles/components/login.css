@@ -71,7 +71,7 @@
   width: 177px;
   height: 50px;
   border-radius: 3px 3px 3px 3px;
-  border: 1px solid #0066ff;
+  border: 1px solid #0066CC;
 }
 
 .custom-button:hover {
@@ -79,18 +79,18 @@
 }
 
 .custom-button-inner {
-  color: #0066ff;
+  color: #0066CC;
 }
 
 .custom-button-d {
   width: 177px;
   height: 50px;
-  background: #0066ff;
+  background: #0066CC;
   border-radius: 3px 3px 3px 3px;
 }
 
 .custom-button-d:hover {
-  background: #0066ff;
+  background: #0066CC;
 }
 
 .custom-button-inner-d {

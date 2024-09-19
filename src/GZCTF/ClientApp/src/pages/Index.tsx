@@ -303,7 +303,7 @@ const Home: FC = () => {
                     {/* </Stack> */}
                     {status == 'Unsubmitted' && teams?.length == 0 && (
                       <Alert
-                        color="#0066ff"
+                        color="#0066CC"
                         icon={<Icon path={mdiAlertCircle} />}
                         title={t('game.participation.alert.team_required.title')}
                       >
