@@ -211,7 +211,7 @@ const Home: FC = () => {
               <div className='centent-introduce'>
                 <div className='centent-introduce-top'>
                   <div className='centent-introduce-icon'>
-                    <div className='centent-medal-icon-img'></div>
+                    <div className='centent-company-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
                     相关说明
@@ -237,7 +237,7 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-company-centent'>
                   <div className='centent-company-centent-detail'>
-                    <div>交流qq群：7894561230</div>
+                    <div>交流qq群：还没有</div>
                     <div>联系邮箱：rekir@qq.com</div>
                   </div>
                 </div>
