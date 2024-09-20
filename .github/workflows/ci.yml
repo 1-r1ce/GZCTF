@@ -67,7 +67,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_TOKEN }}
         
 #      - name: Login to BaseCTF Private Registry
 #        uses: docker/login-action@v3
@@ -105,7 +105,7 @@ jobs:
         uses: vlaurin/action-ghcr-prune@v0.6.0
         with:
           dry-run: false
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           container: ${{ github.event.repository.name }}/gzctf
           keep-tags-regexes: ^v\d+\.\d+\.\d+$
           prune-tags-regexes: ^[0-9a-f]{6,40}
