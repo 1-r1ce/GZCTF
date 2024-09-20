@@ -237,7 +237,7 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-company-centent'>
                   <div className='centent-company-centent-detail'>
-                    <div>交流qq群：还没有</div>
+                    <div>交流qq群：953072843</div>
                     <div>联系邮箱：rekir@qq.com</div>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ const Home: FC = () => {
                         <div className='communication-centent-img1'></div>
                         <div className='communication-centent-text'>
                           <div>交流qq群</div>
-                          <div>还没有</div>
+                          <div>953072843</div>
                         </div>
                       </div>
                       <div style={{ display: "flex", alignItems: 'center' }}>
