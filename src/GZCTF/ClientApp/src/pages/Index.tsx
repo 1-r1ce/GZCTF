@@ -185,7 +185,7 @@ const Home: FC = () => {
                   </div>
                 </div>
                 <div className='centent-introduce-centent'>
-                  <div className='centent-introduce-centent-detail'>2024“源鲁杯”高校网络安全技能大赛是由山东源鲁信息科技有限公司举办的网络安全公开赛事，采用线上CTF解题赛的形式进行。大赛旨在为高校学生提供展示才华和交流学习的平台，重点考核参赛选手的实战能力，致力于发现和培养网络安全领域的高、精、尖人才。</div>
+                  <div className='centent-introduce-centent-detail'>2024 SnigeCTF 网络安全挑战赛是由山东源鲁信息科技有限公司举办的网络安全公开赛事，采用线上CTF解题赛的形式进行。大赛旨在为高校学生提供展示才华和交流学习的平台，重点考核参赛选手的实战能力，致力于发现和培养网络安全领域的高、精、尖人才。</div>
                 </div>
               </div>
               <div className='centent-introduce'>

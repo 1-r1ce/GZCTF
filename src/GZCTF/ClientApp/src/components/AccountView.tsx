@@ -22,7 +22,7 @@ const AccountView: FC<AccountViewProps> = ({ onSubmit, children }) => {
             欢迎登录
           </div>
           <div className="loginCentent">
-            2024“源鲁杯”高校网络安全技能大赛
+            2024 SnigeCTF 网络安全挑战赛
           </div>
         </div>
         <form
