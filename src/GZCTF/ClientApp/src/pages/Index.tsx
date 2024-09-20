@@ -172,7 +172,7 @@ const Home: FC = () => {
           <div className="centent">
             <div className="titleCenter">
               <div className='titleBg'></div>
-              <img src="../../styles/image/title.png" alt="比赛title logo" className="title-logo" />
+	      <div className='titleLogo'></div>
               <div>比赛须知</div>
             </div>
             <div>
