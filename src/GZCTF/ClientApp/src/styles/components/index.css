@@ -27,6 +27,11 @@
     position: relative;
 }
 
+.title-logo-img {
+    height: 32px;
+    background: url('../image/title.png');
+}
+
 .titleBg {
     width: 6vw;
     height: 0.7vw;

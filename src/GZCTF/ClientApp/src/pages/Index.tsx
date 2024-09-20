@@ -172,6 +172,7 @@ const Home: FC = () => {
           <div className="centent">
             <div className="titleCenter">
               <div className='titleBg'></div>
+              <div className='title-logo-img'></div>
               <div>比赛须知</div>
             </div>
             <div>
