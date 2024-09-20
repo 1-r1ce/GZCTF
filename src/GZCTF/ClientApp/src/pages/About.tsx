@@ -31,7 +31,7 @@ const About: FC = () => {
       <Stack justify="space-between" h="calc(100vh - 16px)">
         <Center h="calc(100vh - 16px)">
           <Title order={2} className={classes.watermark}>
-            GZ::CTF
+            Snige::CTF
           </Title>
           <Text className={classes.bio}>
             &gt; {config?.slogan ?? t('common.content.about.slogan')}
