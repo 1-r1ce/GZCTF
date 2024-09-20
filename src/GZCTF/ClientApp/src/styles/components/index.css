@@ -37,6 +37,13 @@
     z-index: -1;
 }
 
+.titleLogo {
+    height: 70px; /* 根据需要调整高度 */
+    background: url('../image/title.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
 .centent-introduce {
     width: 100%;
     color: #000;

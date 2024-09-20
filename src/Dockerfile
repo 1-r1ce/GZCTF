@@ -6,6 +6,10 @@ ARG GIT_NAME
 ENV VITE_APP_BUILD_TIMESTAMP=$TIMESTAMP \
     VITE_APP_GIT_SHA=$GIT_SHA \
     VITE_APP_GIT_NAME=$GIT_NAME
+# Show build arguments (optional)
+RUN echo "GIT SHA: $GIT_SHA" && \
+    echo "GIT Name: $GIT_NAME" && \
+    echo "Build Timestamp: $TIMESTAMP"
 
 RUN apt update && apt install -y wget gnupg2 libpcap0.8 && \
     wget -qO- https://deb.nodesource.com/setup_20.x | bash - && \
