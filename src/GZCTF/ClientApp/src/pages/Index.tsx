@@ -237,8 +237,8 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-company-centent'>
                   <div className='centent-company-centent-detail'>
-                    交流qq群：7894561230 <br>
-                    联系邮箱：rekir@qq.com
+                    <div>交流qq群：7894561230</div>
+                    <div>联系邮箱：rekir@qq.com</div>
                   </div>
                 </div>
               </div>
