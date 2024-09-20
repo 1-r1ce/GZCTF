@@ -137,12 +137,12 @@ public class Container
     #region Db Relationship
 
     /// <summary>
-    /// 比赛题目实例对象
+    /// 练习题目实例对象
     /// </summary>
     public GameInstance? GameInstance { get; set; }
 
     /// <summary>
-    /// 比赛题目实例对象 ID
+    /// 练习题目实例对象 ID
     /// </summary>
     public int? GameInstanceId { get; set; }
 

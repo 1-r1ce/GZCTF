@@ -7,7 +7,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 创建题目对象
     /// </summary>
-    /// <param name="game">比赛对象</param>
+    /// <param name="game">练习对象</param>
     /// <param name="challenge">题目对象</param>
     /// <param name="token"></param>
     /// <returns></returns>
@@ -24,7 +24,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 获取全部题目
     /// </summary>
-    /// <param name="gameId">比赛Id</param>
+    /// <param name="gameId">练习Id</param>
     /// <param name="token"></param>
     /// <returns></returns>
     public Task<GameChallenge[]> GetChallenges(int gameId, CancellationToken token = default);
@@ -32,7 +32,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 获取题目
     /// </summary>
-    /// <param name="gameId">比赛Id</param>
+    /// <param name="gameId">练习Id</param>
     /// <param name="id">题目Id</param>
     /// <param name="withFlag">是否加载Flag</param>
     /// <param name="token"></param>
@@ -43,7 +43,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 获取全部需要捕获流量的题目
     /// </summary>
-    /// <param name="gameId">比赛Id</param>
+    /// <param name="gameId">练习Id</param>
     /// <param name="token"></param>
     /// <returns></returns>
     public Task<GameChallenge[]> GetChallengesWithTrafficCapturing(int gameId, CancellationToken token = default);
@@ -51,7 +51,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 添加 Flag
     /// </summary>
-    /// <param name="challenge">比赛题目对象</param>
+    /// <param name="challenge">练习题目对象</param>
     /// <param name="model">Flag 信息</param>
     /// <param name="token"></param>
     /// <returns></returns>
@@ -69,7 +69,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 更新附件
     /// </summary>
-    /// <param name="challenge">比赛题目对象</param>
+    /// <param name="challenge">练习题目对象</param>
     /// <param name="model">附件信息</param>
     /// <param name="token"></param>
     /// <returns></returns>
@@ -79,7 +79,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 删除 Flag，确保 Flags 字段已加载
     /// </summary>
-    /// <param name="challenge">比赛题目对象</param>
+    /// <param name="challenge">练习题目对象</param>
     /// <param name="flagId">flag ID</param>
     /// <param name="token"></param>
     /// <returns></returns>
@@ -88,7 +88,7 @@ public interface IGameChallengeRepository : IRepository
     /// <summary>
     /// 重新计算解题数量
     /// </summary>
-    /// <param name="game">比赛 id</param>
+    /// <param name="game">练习 id</param>
     /// <param name="token"></param>
     /// <returns></returns>
     public Task<bool> RecalculateAcceptedCount(Game game, CancellationToken token = default);

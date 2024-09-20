@@ -46,13 +46,13 @@ public class UserParticipation
     public Team Team { get; set; } = default!;
 
     /// <summary>
-    /// 比赛 Id
+    /// 练习 Id
     /// </summary>
     [Required]
     public int GameId { get; set; }
 
     /// <summary>
-    /// 比赛
+    /// 练习
     /// </summary>
     public Game Game { get; set; } = default!;
 

@@ -386,7 +386,7 @@
     <value>K8s 初始化失败，请检查相关配置是否正确 ({0})</value>
   </data>
   <data name="CronJob_BootstrapRankingCache" xml:space="preserve">
-    <value>比赛 #{0} 即将开始，积分榜缓存已加入缓存队列</value>
+    <value>练习 #{0} 即将开始，积分榜缓存已加入缓存队列</value>
   </data>
   <data name="CronJob_RemoveExpiredContainer" xml:space="preserve">
     <value>移除到期容器 [{0}]</value>
@@ -473,22 +473,22 @@
     <value>检查线程 #{0} 已退出</value>
   </data>
   <data name="GameRepository_GameDeletionChallenges" xml:space="preserve">
-    <value>正在清理比赛 {0} 的 {1} 个题目的相关附件……</value>
+    <value>正在清理练习 {0} 的 {1} 个题目的相关附件……</value>
   </data>
   <data name="Game_DeletionFailed" xml:space="preserve">
-    <value>删除比赛失败，相关文件可能已受损，请重新删除</value>
+    <value>删除练习失败，相关文件可能已受损，请重新删除</value>
   </data>
   <data name="GameRepository_GameDeletionTeams" xml:space="preserve">
-    <value>正在清理比赛 {0} 的 {1} 个队伍相关文件……</value>
+    <value>正在清理练习 {0} 的 {1} 个队伍相关文件……</value>
   </data>
   <data name="GameRepository_XorKeyNotConfigured" xml:space="preserve">
-    <value>配置文件中的异或密钥未设置，比赛私钥将会被明文存储至数据库。</value>
+    <value>配置文件中的异或密钥未设置，练习私钥将会被明文存储至数据库。</value>
   </data>
   <data name="Game_CannotLeaveAfterApproval" xml:space="preserve">
-    <value>审核通过后无法退出比赛</value>
+    <value>审核通过后无法退出练习</value>
   </data>
   <data name="Game_CannotLeaveWithoutJoin" xml:space="preserve">
-    <value>无法退出未报名的比赛</value>
+    <value>无法退出未报名的练习</value>
   </data>
   <data name="Game_CaptureNotFound" xml:space="preserve">
     <value>未找到相关捕获信息</value>
@@ -524,13 +524,13 @@
     <value>提交截止时间已过</value>
   </data>
   <data name="Game_Ended" xml:space="preserve">
-    <value>比赛已结束</value>
+    <value>练习已结束</value>
   </data>
   <data name="Game_InOtherTeam" xml:space="preserve">
     <value>您已经在其他队伍报名参赛</value>
   </data>
   <data name="Game_InvalidInvitationCode" xml:space="preserve">
-    <value>比赛邀请码错误</value>
+    <value>练习邀请码错误</value>
   </data>
   <data name="Game_InvalidOrganization" xml:space="preserve">
     <value>无效的参赛单位</value>
@@ -539,10 +539,10 @@
     <value>参赛单位相应邀请码错误</value>
   </data>
   <data name="Game_JoinSucceeded" xml:space="preserve">
-    <value>{0} 成功报名了比赛 {1}</value>
+    <value>{0} 成功报名了练习 {1}</value>
   </data>
   <data name="Game_NotFound" xml:space="preserve">
-    <value>比赛未找到</value>
+    <value>练习未找到</value>
   </data>
   <data name="Game_NotMemberOfTeam" xml:space="preserve">
     <value>您不是此队伍的队员</value>
@@ -551,7 +551,7 @@
     <value>您尚未参赛</value>
   </data>
   <data name="Game_NotStarted" xml:space="preserve">
-    <value>比赛未开始</value>
+    <value>练习未开始</value>
   </data>
   <data name="Game_OperationTooFrequent" xml:space="preserve">
     <value>容器操作过于频繁</value>
@@ -566,7 +566,7 @@
     <value>提交未找到</value>
   </data>
   <data name="Game_TeamMemberLimitExceeded" xml:space="preserve">
-    <value>队伍参与人数超过比赛限制</value>
+    <value>队伍参与人数超过练习限制</value>
   </data>
   <data name="Game_WriteupSubmitted" xml:space="preserve">
     <value>{0} 成功提交 {1} 的 Writeup</value>
@@ -701,7 +701,7 @@
     <value>项目基于 AGPL-3.0 许可证，开源于 [GZTimeWalker/GZCTF](https://github.com/GZTimeWalker/GZCTF)。</value>
   </data>
   <data name="Init_PostSummary" xml:space="preserve">
-    <value>一个开源的CTF比赛平台</value>
+    <value>一个开源的CTF练习平台</value>
   </data>
   <data name="Init_PostTitle" xml:space="preserve">
     <value>欢迎使用 GZ::CTF</value>
@@ -899,7 +899,7 @@
     <value>答案错误</value>
   </data>
   <data name="Game_CreationFailed" xml:space="preserve">
-    <value>比赛创建失败</value>
+    <value>练习创建失败</value>
   </data>
   <data name="Challenge_CaptureNotAllowed" xml:space="preserve">
     <value>只有容器题目可以进行流量捕获</value>
@@ -1028,7 +1028,7 @@
     <value>用户不在队伍中</value>
   </data>
   <data name="Game_WriteupNotNeeded" xml:space="preserve">
-    <value>本次比赛不可提交 Writeup</value>
+    <value>本次练习不可提交 Writeup</value>
   </data>
   <data name="Signature_Invalid" xml:space="preserve">
     <value>无效的签名</value>

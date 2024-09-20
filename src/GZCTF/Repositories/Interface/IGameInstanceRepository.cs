@@ -33,7 +33,7 @@ public interface IGameInstanceRepository : IRepository
     /// 创建容器实例
     /// </summary>
     /// <param name="team">队伍信息</param>
-    /// <param name="game">比赛对象</param>
+    /// <param name="game">练习对象</param>
     /// <param name="user">用户对象</param>
     /// <param name="gameInstance">实例对象</param>
     /// <param name="token"></param>

@@ -235,14 +235,14 @@ GZCTF 支持测量和分布式追踪。您可以配置您想要使用的提供�
 
 ### XorKey
 
-此处配置加密密钥，用于加密数据库中比赛的私钥信息，可为任意长度的任意字符串。
+此处配置加密密钥，用于加密数据库中练习的私钥信息，可为任意长度的任意字符串。
 
 ### ContainerProvider
 
-此处配置容器后端，为比赛动态创建容器的必填项。
+此处配置容器后端，为练习动态创建容器的必填项。
 
 - **Type:** 容器后端类型，可选 `Docker` 或 `Kubernetes`。
-- **PublicEntry:** 容器后端的公网地址，用于生成比赛的访问地址，展示给参赛队伍。
+- **PublicEntry:** 容器后端的公网地址，用于生成练习的访问地址，展示给参赛队伍。
 - **PortMappingType:** 端口映射类型，可选 `Default` 或 `PlatformProxy`。
 - **EnableTrafficCapture:** 是否开启流量捕获，仅在 `PortMappingType` 设置为 `PlatformProxy` 时可用。若开启，将会记录流量于 `/app/files/capture` 目录下。
 
@@ -296,7 +296,7 @@ GZCTF 支持测量和分布式追踪。您可以配置您想要使用的提供�
 
 ### RegistryConfig
 
-此处配置 Docker Registry 的用户名和密码，用于比赛动态创建容器时拉取镜像的验证，可选项。
+此处配置 Docker Registry 的用户名和密码，用于练习动态创建容器时拉取镜像的验证，可选项。
 
 - **UserName:** Docker Registry 用户名
 - **Password:** Docker Registry 密码

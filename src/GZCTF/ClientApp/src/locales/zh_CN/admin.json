@@ -42,8 +42,8 @@
         }
       },
       "copy_public_key": "复制公钥",
-      "delete": "删除比赛",
-      "new": "新建比赛"
+      "delete": "删除练习",
+      "new": "新建练习"
     },
     "notices": {
       "delete": "删除公告",
@@ -107,7 +107,7 @@
         "disable": "你确定要禁用题目 {{name}} 吗？",
         "empty": {
           "description": "点击右上角创建第一个题目",
-          "title": "Ouch! 这个比赛还没有题目"
+          "title": "Ouch! 这个练习还没有题目"
         },
         "enable": "你确定要启用题目 {{name}} 吗？",
         "flag": {
@@ -124,7 +124,7 @@
             "guid": "指定 <1>[GUID]</1>则会仅替换此处的占位符为随机 GUID",
             "leave_empty": "留空",
             "leet": "若未指定 <1>[TEAM_HASH]</1> 则将启用 Leet 字符串功能，将会基于模版对花括号内字符串进行变换，需要确保 flag 模版字符串的熵足够高",
-            "team_hash": "若指定 <1>[TEAM_HASH]</1> 则它将会被自动替换为队伍 Token 和比赛信息所生成的哈希值",
+            "team_hash": "若指定 <1>[TEAM_HASH]</1> 则它将会被自动替换为队伍 Token 和练习信息所生成的哈希值",
             "complex": "如果需要在 flag 生成中启用特殊字符，请在字符串开头用 <1>[CLEET]</1> 代替 <2>[LEET]</2>，这可能造成对于题目的注入问题",
             "will_generate": "将会生成"
           },
@@ -170,8 +170,8 @@
           "description": "队伍共享的容器数量 (0 表示不限制)",
           "label": "队伍容器限制"
         },
-        "content": "比赛详情",
-        "delete": "你确定要删除比赛 {{name}} 吗？",
+        "content": "练习详情",
+        "delete": "你确定要删除练习 {{name}} 吗？",
         "end_date": "结束日期",
         "end_time": "结束时间",
         "invite_code": {
@@ -187,28 +187,28 @@
           "description": "添加参赛组织以开启分组榜单，留空则不分组",
           "label": "参赛可选组织列表"
         },
-        "poster": "比赛海报",
+        "poster": "练习海报",
         "practice_mode": {
-          "description": "比赛结束后仍然可以查看题目和提交",
+          "description": "练习结束后仍然可以查看题目和提交",
           "label": "练习模式"
         },
         "start_date": "开始日期",
         "start_time": "开始时间",
         "summary": {
-          "description": "将会显示在比赛列表中",
-          "label": "比赛简介"
+          "description": "将会显示在练习列表中",
+          "label": "练习简介"
         },
         "title": {
           "description": "过长会影响显示效果",
-          "label": "比赛标题"
+          "label": "练习标题"
         },
         "writeup_deadline": {
-          "description": "比赛结束后允许提交 Writeup 的小时数",
+          "description": "练习结束后允许提交 Writeup 的小时数",
           "label": "Writeup 提交时限"
         },
         "writeup_instruction": "Writeup 提交说明",
         "writeup_required": {
-          "description": "是否启用比赛的 Writeup 提交功能",
+          "description": "是否启用练习的 Writeup 提交功能",
           "label": "需要 Writeup"
         }
       },
@@ -222,7 +222,7 @@
       "review": {
         "empty": {
           "description": "在路上了……别急！",
-          "title": "Ouch! 还没有队伍报名这个比赛"
+          "title": "Ouch! 还没有队伍报名这个练习"
         },
         "participation": {
           "joined": "已报名",
@@ -236,7 +236,7 @@
           "update": "确定要设为 \"{{status}}\" 吗？"
         }
       },
-      "stats": "已显示 <1>{{current}}</1>/<1>{{total}}</1> 比赛",
+      "stats": "已显示 <1>{{current}}</1>/<1>{{total}}</1> 练习",
       "writeups": {
         "empty": {
           "description": "新提交的 Writeup 会显示在这里",
@@ -401,11 +401,11 @@
         },
         "updated": "题目已更新"
       },
-      "created": "比赛已创建",
+      "created": "练习已创建",
       "info": {
         "accept_count_updated": "解题数量已刷新",
-        "deleted": "比赛已删除",
-        "info_updated": "比赛信息已更新",
+        "deleted": "练习已删除",
+        "info_updated": "练习信息已更新",
         "organizations": "点击此处编辑组织",
         "poster": {
           "upload_failed": "海报上传失败",
@@ -499,9 +499,9 @@
   "tab": {
     "games": {
       "challenges": "题目管理",
-      "index": "比赛管理",
+      "index": "练习管理",
       "info": "信息编辑",
-      "notices": "比赛公告",
+      "notices": "练习公告",
       "review": "队伍审核",
       "writeups": "Writeups"
     },

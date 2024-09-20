@@ -172,7 +172,7 @@ const Home: FC = () => {
           <div className="centent">
             <div className="titleCenter">
               <div className='titleBg'></div>
-              <div>比赛须知</div>
+              <div>练习须知</div>
             </div>
             <div>
               <div style={{ marginTop: "50px" }} className='centent-introduce'>
@@ -181,7 +181,7 @@ const Home: FC = () => {
                     <div className='centent-introduce-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
-                    比赛介绍
+                    练习介绍
                   </div>
                 </div>
                 <div className='centent-introduce-centent'>
@@ -199,11 +199,11 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-format-centent'>
                   <div className='centent-format-centent-detail'>
-                    <div>比赛时间：10月10日-10月23日</div>
-                    <div>报名时间：09月01日-10月23日（比赛期间可随时报名参赛）</div>
-                    <div>比赛方式：线上个人赛</div>
-                    <div>比赛方向：Web/Re/Pwn/Crypto/Misc</div>
-                    <div>比赛赛道：本次比赛设立新生赛道与公开赛道，采用相同的比赛题目，并分别设立奖项。</div>
+                    <div>练习时间：10月10日-10月23日</div>
+                    <div>报名时间：09月01日-10月23日（练习期间可随时报名参赛）</div>
+                    <div>练习方式：线上个人赛</div>
+                    <div>练习方向：Web/Re/Pwn/Crypto/Misc</div>
+                    <div>练习赛道：本次练习设立新生赛道与公开赛道，采用相同的练习题目，并分别设立奖项。</div>
                     <div>排名机制：采用动态积分制，按照积分从高到低排名，两队相同积分时以先达到该积分的先后顺序排名。</div>
                   </div>
                 </div>
@@ -234,9 +234,9 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-match-centent'>
                   <div className='centent-match-centent-detail'>
-                    <div>1. 禁止所有破坏比赛公平公正的行为，包括但不限于：比赛结束前公开平台发布解题思路、传播flag、对比赛平台及参赛选手进行攻击，一经发现将被取消比赛资格。</div>
-                    <div>2. 本次比赛面向全国各大高校，获奖选手需提供相关在校证明材料，否则取消其获奖资格，名额顺延。</div>
-                    <div>3. 参赛选手需在比赛结束后指定时间内提交WriteUP，不按照要求提交WriteUP者视为放弃此次成绩。 </div>
+                    <div>1. 禁止所有破坏练习公平公正的行为，包括但不限于：练习结束前公开平台发布解题思路、传播flag、对练习平台及参赛选手进行攻击，一经发现将被取消练习资格。</div>
+                    <div>2. 本次练习面向全国各大高校，获奖选手需提供相关在校证明材料，否则取消其获奖资格，名额顺延。</div>
+                    <div>3. 参赛选手需在练习结束后指定时间内提交WriteUP，不按照要求提交WriteUP者视为放弃此次成绩。 </div>
                     <div>4. 依照 AGPLv3在&nbsp;&lt; https://github.com/YuanlooSec/GZCTF &gt;&nbsp;开源。 </div>
                     <div>5. 赛事的最终解释权归山东源鲁信息科技有限公司所有。</div>
                   </div>
@@ -291,8 +291,8 @@ const Home: FC = () => {
                       />
                       <Title order={3}>{t('common.content.home.recent_games')}</Title>
                     </Group> */}
-                  {isAfter && <div className='button' style={{ backgroundColor: '#ccc' }}>比赛结束</div>}
-                  {status == 'Accepted' && !isAfter && isAfterStart && <div className='button' onClick={() => navigate(`/games/${numId}/challenges`)}>进入比赛</div>}
+                  {isAfter && <div className='button' style={{ backgroundColor: '#ccc' }}>练习结束</div>}
+                  {status == 'Accepted' && !isAfter && isAfterStart && <div className='button' onClick={() => navigate(`/games/${numId}/challenges`)}>进入练习</div>}
                   {status == 'Accepted' && !isAfter && !isAfterStart && <div className='button' style={{ backgroundColor: '#ccc' }}>即将开赛</div>}
                   {status == 'Unsubmitted' && teams?.length == 0 && !isAfter && <div className='button' style={{ backgroundColor: '#ccc' }}>立即报名</div>}
                   {status == 'Unsubmitted' && teams?.length != 0 && !isAfter && <div className='button' onClick={onJoin}>立即报名</div>}

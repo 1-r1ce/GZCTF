@@ -99,7 +99,7 @@ public class Challenge
     public Guid ConcurrencyStamp { get; set; }
 
     /// <summary>
-    /// Flag 模版，用于根据 Token 和题目、比赛信息生成 Flag
+    /// Flag 模版，用于根据 Token 和题目、练习信息生成 Flag
     /// </summary>
     [MaxLength(Limits.MaxFlagTemplateLength)]
     public string? FlagTemplate { get; set; } = "BaseCTF{[GUID]}";

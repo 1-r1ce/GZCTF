@@ -137,7 +137,7 @@ public enum ContainerStatus : byte
 }
 
 /// <summary>
-/// 比赛公告类型
+/// 练习公告类型
 /// </summary>
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum NoticeType : byte
@@ -186,7 +186,7 @@ public static class SubmissionTypeExtensions
 }
 
 /// <summary>
-/// 比赛事件类型
+/// 练习事件类型
 /// </summary>
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum EventType : byte
@@ -425,12 +425,12 @@ public static class AnswerResultExtensions
 public static class ErrorCodes
 {
     /// <summary>
-    /// 比赛未开始
+    /// 练习未开始
     /// </summary>
     public const int GameNotStarted = 10001;
 
     /// <summary>
-    /// 比赛已结束
+    /// 练习已结束
     /// </summary>
     public const int GameEnded = 10002;
 }

@@ -12,12 +12,12 @@ public class CheatInfo
     #region Db Relationship
 
     /// <summary>
-    /// 比赛对象
+    /// 练习对象
     /// </summary>
     public Game Game { get; set; } = default!;
 
     /// <summary>
-    /// 比赛对象 ID
+    /// 练习对象 ID
     /// </summary>
     public int GameId { get; set; }
 

@@ -17,7 +17,7 @@ const Countdown = () => {
     ...(allGames?.filter((g) => now >= new Date(g.end ?? '')).reverse() ?? []),
   ].slice(0, 3)
 
-  let title = '距离 比赛开始 还有'
+  let title = '距离 练习开始 还有'
   let nowNew = new Date();
   let targetDate = new Date('2024-10-10T09:00:00');
   if (recentGames.length != 0) {
@@ -27,11 +27,11 @@ const Countdown = () => {
   let isAfterEnd = true
   if(isAfter){
     if(nowNew>new Date(recentGames[0].end??'')){
-      title = '比赛结束'
+      title = '练习结束'
       isAfterEnd = false
     }else{
       targetDate =  new Date(recentGames[0].end??'')
-      title = '距离 比赛结束 还有'
+      title = '距离 练习结束 还有'
     }
   }
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());

@@ -99,7 +99,7 @@
   "notification": {
     "flag": {
       "accepted": {
-        "ended": "比赛已结束，本次提交不会被计分",
+        "ended": "练习已结束，本次提交不会被计分",
         "message": "排行榜将稍后更新……",
         "title": "flag 正确"
       },

@@ -49,7 +49,7 @@
     },
     "external_link": "外部链接",
     "home": {
-      "recent_games": "近期比赛"
+      "recent_games": "近期练习"
     },
     "no_data": "没有数据",
     "report_error": "如果你认为这是一个异常错误，请联系管理员",
@@ -90,7 +90,7 @@
   "label": {
     "challenge": "题目",
     "flag": "flag",
-    "game": "比赛",
+    "game": "练习",
     "ip": "IP",
     "team": "队伍",
     "time": "时间",

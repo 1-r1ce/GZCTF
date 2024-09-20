@@ -13,7 +13,7 @@ public interface IGameEventRepository : IRepository
     /// <summary>
     /// 获取全部事件
     /// </summary>
-    /// <param name="gameId">比赛Id</param>
+    /// <param name="gameId">练习Id</param>
     /// <param name="hideContainer">隐藏容器事件</param>
     /// <param name="count">数量</param>
     /// <param name="skip">跳过数量</param>

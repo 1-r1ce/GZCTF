@@ -6,7 +6,7 @@ using Microsoft.Extensions.Localization;
 namespace GZCTF.Models.Data;
 
 /// <summary>
-/// 比赛事件，记录但不会发往客户端。
+/// 练习事件，记录但不会发往客户端。
 /// 信息涵盖Flag提交信息、容器启动关闭信息、作弊信息、题目分数变更信息
 /// </summary>
 public class GameEvent : FormattableData<EventType>

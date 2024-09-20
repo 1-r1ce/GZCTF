@@ -633,12 +633,12 @@ export const IMAGE_MIME_TYPES = [
 /** 系统错误信息 */
 export const enum ErrorCodes {
   /**
-   * 比赛未开始
+   * 练习未开始
    */
   GameNotStarted = 10001,
 
   /**
-   * 比赛已结束
+   * 练习已结束
    */
   GameEnded = 10002,
 }

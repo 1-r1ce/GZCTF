@@ -229,7 +229,7 @@ export interface ConfigEditModel {
   accountPolicy?: AccountPolicy | null;
   /** 全局配置项 */
   globalConfig?: GlobalConfig | null;
-  /** 比赛策略 */
+  /** 练习策略 */
   containerPolicy?: ContainerPolicy | null;
 }
 
@@ -526,7 +526,7 @@ export enum ParticipationStatus {
   Unsubmitted = "Unsubmitted",
 }
 
-/** 比赛 Writeup 信息 */
+/** 练习 Writeup 信息 */
 export interface WriteupInfoModel {
   /**
    * 参与对象 Id
@@ -732,30 +732,30 @@ export interface PostDetailModel {
   time: string;
 }
 
-/** 比赛信息（Edit） */
+/** 练习信息（Edit） */
 export interface GameInfoModel {
   /**
-   * 比赛 Id
+   * 练习 Id
    * @format int32
    */
   id?: number;
   /**
-   * 比赛标题
+   * 练习标题
    * @minLength 1
    */
   title: string;
   /** 是否隐藏 */
   hidden?: boolean;
-  /** 比赛描述 */
+  /** 练习描述 */
   summary?: string;
-  /** 比赛详细介绍 */
+  /** 练习详细介绍 */
   content?: string;
   /** 报名队伍免审核 */
   acceptWithoutReview?: boolean;
   /** 是否需要提交 Writeup */
   writeupRequired?: boolean;
   /**
-   * 比赛邀请码
+   * 练习邀请码
    * @maxLength 32
    */
   inviteCode?: string | null;
@@ -771,11 +771,11 @@ export interface GameInfoModel {
    * @format int32
    */
   containerCountLimit?: number;
-  /** 比赛头图 */
+  /** 练习头图 */
   poster?: string | null;
-  /** 比赛签名公钥 */
+  /** 练习签名公钥 */
   publicKey?: string;
-  /** 比赛是否为练习模式（比赛结束够依然可以访问） */
+  /** 练习是否为练习模式（练习结束够依然可以访问） */
   practiceMode?: boolean;
   /**
    * 开始时间
@@ -820,7 +820,7 @@ export interface ArrayResponseOfGameInfoModel {
 }
 
 /**
- * 比赛通知，会发往客户端。
+ * 练习通知，会发往客户端。
  * 信息涵盖一二三血通知、提示发布通知、题目开启通知等
  */
 export type GameNotice = FormattableDataOfNoticeType & {
@@ -842,7 +842,7 @@ export interface FormattableDataOfNoticeType {
   values: string[];
 }
 
-/** 比赛公告类型 */
+/** 练习公告类型 */
 export enum NoticeType {
   Normal = "Normal",
   FirstBlood = "FirstBlood",
@@ -852,7 +852,7 @@ export enum NoticeType {
   NewChallenge = "NewChallenge",
 }
 
-/** 比赛通知（Edit） */
+/** 练习通知（Edit） */
 export interface GameNoticeModel {
   /**
    * 通知内容
@@ -882,7 +882,7 @@ export interface ChallengeEditDetailModel {
   /** 题目提示 */
   hints?: string[];
   /**
-   * Flag 模版，用于根据 Token 和题目、比赛信息生成 Flag
+   * Flag 模版，用于根据 Token 和题目、练习信息生成 Flag
    * @maxLength 120
    */
   flagTemplate?: string | null;
@@ -1067,7 +1067,7 @@ export interface ChallengeUpdateModel {
   /** 题目内容 */
   content?: string | null;
   /**
-   * Flag 模版，用于根据 Token 和题目、比赛信息生成 Flag
+   * Flag 模版，用于根据 Token 和题目、练习信息生成 Flag
    * @maxLength 120
    */
   flagTemplate?: string | null;
@@ -1177,13 +1177,13 @@ export enum TaskStatus {
   Pending = "Pending",
 }
 
-/** 比赛基本信息，不包含详细介绍与当前队伍报名状态 */
+/** 练习基本信息，不包含详细介绍与当前队伍报名状态 */
 export interface BasicGameInfoModel {
   /** @format int32 */
   id?: number;
-  /** 比赛标题 */
+  /** 练习标题 */
   title?: string;
-  /** 比赛描述 */
+  /** 练习描述 */
   summary?: string;
   /** 头图 */
   poster?: string | null;
@@ -1204,17 +1204,17 @@ export interface BasicGameInfoModel {
   end?: string;
 }
 
-/** 比赛详细信息，包含详细介绍与当前队伍报名状态 */
+/** 练习详细信息，包含详细介绍与当前队伍报名状态 */
 export interface DetailedGameInfoModel {
   /** @format int32 */
   id?: number;
-  /** 比赛标题 */
+  /** 练习标题 */
   title?: string;
-  /** 比赛描述 */
+  /** 练习描述 */
   summary?: string;
-  /** 比赛详细介绍 */
+  /** 练习详细介绍 */
   content?: string;
-  /** 是否为隐藏比赛 */
+  /** 是否为隐藏练习 */
   hidden?: boolean;
   /** 参赛所属单位列表 */
   organizations?: Record<string, string | null>;
@@ -1224,7 +1224,7 @@ export interface DetailedGameInfoModel {
   inviteCodeRequired?: boolean;
   /** 是否需要提交 Writeup */
   writeupRequired?: boolean;
-  /** 比赛头图 */
+  /** 练习头图 */
   poster?: string | null;
   /**
    * 队员数量限制
@@ -1240,7 +1240,7 @@ export interface DetailedGameInfoModel {
   organization?: string | null;
   /** 参赛队伍名称 */
   teamName?: string | null;
-  /** 比赛是否为练习模式（比赛结束够依然可以访问） */
+  /** 练习是否为练习模式（练习结束够依然可以访问） */
   practiceMode?: boolean;
   /** 队伍参与状态 */
   status?: ParticipationStatus;
@@ -1437,7 +1437,7 @@ export interface Blood {
 }
 
 /**
- * 比赛事件，记录但不会发往客户端。
+ * 练习事件，记录但不会发往客户端。
  * 信息涵盖Flag提交信息、容器启动关闭信息、作弊信息、题目分数变更信息
  */
 export type GameEvent = FormattableDataOfEventType & {
@@ -1461,7 +1461,7 @@ export interface FormattableDataOfEventType {
   values: string[];
 }
 
-/** 比赛事件类型 */
+/** 练习事件类型 */
 export enum EventType {
   Normal = "Normal",
   ContainerStart = "ContainerStart",
@@ -1616,7 +1616,7 @@ export interface GameDetailModel {
   writeupDeadline: string;
 }
 
-/** 比赛参与对象，用于审核查看（Admin） */
+/** 练习参与对象，用于审核查看（Admin） */
 export interface ParticipationInfoModel {
   /**
    * 参与对象 Id
@@ -1633,7 +1633,7 @@ export interface ParticipationInfoModel {
   status?: ParticipationStatus;
 }
 
-/** 比赛队伍详细信息，用于审核查看（Admin） */
+/** 练习队伍详细信息，用于审核查看（Admin） */
 export interface TeamWithDetailedUserInfo {
   /**
    * 队伍 Id
@@ -1711,7 +1711,7 @@ export interface FlagSubmitModel {
   flag: string;
 }
 
-/** 比赛 Writeup 提交信息 */
+/** 练习 Writeup 提交信息 */
 export interface BasicWriteupInfoModel {
   /** 是否已经提交 */
   submitted?: boolean;
@@ -1833,7 +1833,7 @@ export interface SignatureVerifyModel {
    */
   teamToken: string;
   /**
-   * 比赛公钥，Base64 编码
+   * 练习公钥，Base64 编码
    * @minLength 1
    */
   publicKey: string;
@@ -3016,11 +3016,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
   };
   edit = {
     /**
-     * @description 添加比赛题目 Flag，需要管理员权限
+     * @description 添加练习题目 Flag，需要管理员权限
      *
      * @tags Edit
      * @name EditAddFlags
-     * @summary 添加比赛题目 Flag
+     * @summary 添加练习题目 Flag
      * @request POST:/api/edit/games/{id}/challenges/{cId}/flags
      */
     editAddFlags: (id: number, cId: number, data: FlagCreateModel[], params: RequestParams = {}) =>
@@ -3033,11 +3033,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 添加比赛，需要管理员权限
+     * @description 添加练习，需要管理员权限
      *
      * @tags Edit
      * @name EditAddGame
-     * @summary 添加比赛
+     * @summary 添加练习
      * @request POST:/api/edit/games
      */
     editAddGame: (data: GameInfoModel, params: RequestParams = {}) =>
@@ -3051,11 +3051,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 添加比赛题目，需要管理员权限
+     * @description 添加练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditAddGameChallenge
-     * @summary 添加比赛题目
+     * @summary 添加练习题目
      * @request POST:/api/edit/games/{id}/challenges
      */
     editAddGameChallenge: (id: number, data: ChallengeInfoModel, params: RequestParams = {}) =>
@@ -3069,11 +3069,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 添加比赛通知，需要管理员权限
+     * @description 添加练习通知，需要管理员权限
      *
      * @tags Edit
      * @name EditAddGameNotice
-     * @summary 添加比赛通知
+     * @summary 添加练习通知
      * @request POST:/api/edit/games/{id}/notices
      */
     editAddGameNotice: (id: number, data: GameNoticeModel, params: RequestParams = {}) =>
@@ -3105,11 +3105,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 测试比赛题目容器，需要管理员权限
+     * @description 测试练习题目容器，需要管理员权限
      *
      * @tags Edit
      * @name EditCreateTestContainer
-     * @summary 测试比赛题目容器
+     * @summary 测试练习题目容器
      * @request POST:/api/edit/games/{id}/challenges/{cId}/container
      */
     editCreateTestContainer: (id: number, cId: number, params: RequestParams = {}) =>
@@ -3121,11 +3121,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 删除比赛，需要管理员权限
+     * @description 删除练习，需要管理员权限
      *
      * @tags Edit
      * @name EditDeleteGame
-     * @summary 删除比赛
+     * @summary 删除练习
      * @request DELETE:/api/edit/games/{id}
      */
     editDeleteGame: (id: number, params: RequestParams = {}) =>
@@ -3137,11 +3137,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 删除比赛通知，需要管理员权限
+     * @description 删除练习通知，需要管理员权限
      *
      * @tags Edit
      * @name EditDeleteGameNotice
-     * @summary 删除比赛通知
+     * @summary 删除练习通知
      * @request DELETE:/api/edit/games/{id}/notices/{noticeId}
      */
     editDeleteGameNotice: (id: number, noticeId: number, params: RequestParams = {}) =>
@@ -3152,11 +3152,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 删除比赛的全部 WriteUp，需要管理员权限
+     * @description 删除练习的全部 WriteUp，需要管理员权限
      *
      * @tags Edit
      * @name EditDeleteGameWriteUps
-     * @summary 删除比赛的全部 WriteUp
+     * @summary 删除练习的全部 WriteUp
      * @request DELETE:/api/edit/games/{id}/writeups
      */
     editDeleteGameWriteUps: (id: number, params: RequestParams = {}) =>
@@ -3183,11 +3183,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 关闭测试比赛题目容器，需要管理员权限
+     * @description 关闭测试练习题目容器，需要管理员权限
      *
      * @tags Edit
      * @name EditDestroyTestContainer
-     * @summary 关闭测试比赛题目容器
+     * @summary 关闭测试练习题目容器
      * @request DELETE:/api/edit/games/{id}/challenges/{cId}/container
      */
     editDestroyTestContainer: (id: number, cId: number, params: RequestParams = {}) =>
@@ -3198,11 +3198,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 获取比赛，需要管理员权限
+     * @description 获取练习，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGame
-     * @summary 获取比赛
+     * @summary 获取练习
      * @request GET:/api/edit/games/{id}
      */
     editGetGame: (id: number, params: RequestParams = {}) =>
@@ -3213,33 +3213,33 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛，需要管理员权限
+     * @description 获取练习，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGame
-     * @summary 获取比赛
+     * @summary 获取练习
      * @request GET:/api/edit/games/{id}
      */
     useEditGetGame: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<GameInfoModel, RequestResponse>(doFetch ? `/api/edit/games/${id}` : null, options),
 
     /**
-     * @description 获取比赛，需要管理员权限
+     * @description 获取练习，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGame
-     * @summary 获取比赛
+     * @summary 获取练习
      * @request GET:/api/edit/games/{id}
      */
     mutateEditGetGame: (id: number, data?: GameInfoModel | Promise<GameInfoModel>, options?: MutatorOptions) =>
       mutate<GameInfoModel>(`/api/edit/games/${id}`, data, options),
 
     /**
-     * @description 获取比赛题目，需要管理员权限
+     * @description 获取练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameChallenge
-     * @summary 获取比赛题目
+     * @summary 获取练习题目
      * @request GET:/api/edit/games/{id}/challenges/{cId}
      */
     editGetGameChallenge: (id: number, cId: number, params: RequestParams = {}) =>
@@ -3250,11 +3250,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛题目，需要管理员权限
+     * @description 获取练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameChallenge
-     * @summary 获取比赛题目
+     * @summary 获取练习题目
      * @request GET:/api/edit/games/{id}/challenges/{cId}
      */
     useEditGetGameChallenge: (id: number, cId: number, options?: SWRConfiguration, doFetch: boolean = true) =>
@@ -3264,11 +3264,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       ),
 
     /**
-     * @description 获取比赛题目，需要管理员权限
+     * @description 获取练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameChallenge
-     * @summary 获取比赛题目
+     * @summary 获取练习题目
      * @request GET:/api/edit/games/{id}/challenges/{cId}
      */
     mutateEditGetGameChallenge: (
@@ -3279,11 +3279,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<ChallengeEditDetailModel>(`/api/edit/games/${id}/challenges/${cId}`, data, options),
 
     /**
-     * @description 获取全部比赛题目，需要管理员权限
+     * @description 获取全部练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameChallenges
-     * @summary 获取全部比赛题目
+     * @summary 获取全部练习题目
      * @request GET:/api/edit/games/{id}/challenges
      */
     editGetGameChallenges: (id: number, params: RequestParams = {}) =>
@@ -3294,22 +3294,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取全部比赛题目，需要管理员权限
+     * @description 获取全部练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameChallenges
-     * @summary 获取全部比赛题目
+     * @summary 获取全部练习题目
      * @request GET:/api/edit/games/{id}/challenges
      */
     useEditGetGameChallenges: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<ChallengeInfoModel[], RequestResponse>(doFetch ? `/api/edit/games/${id}/challenges` : null, options),
 
     /**
-     * @description 获取全部比赛题目，需要管理员权限
+     * @description 获取全部练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameChallenges
-     * @summary 获取全部比赛题目
+     * @summary 获取全部练习题目
      * @request GET:/api/edit/games/{id}/challenges
      */
     mutateEditGetGameChallenges: (
@@ -3319,11 +3319,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<ChallengeInfoModel[]>(`/api/edit/games/${id}/challenges`, data, options),
 
     /**
-     * @description 获取比赛通知，需要管理员权限
+     * @description 获取练习通知，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameNotices
-     * @summary 获取比赛通知
+     * @summary 获取练习通知
      * @request GET:/api/edit/games/{id}/notices
      */
     editGetGameNotices: (id: number, params: RequestParams = {}) =>
@@ -3334,33 +3334,33 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛通知，需要管理员权限
+     * @description 获取练习通知，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameNotices
-     * @summary 获取比赛通知
+     * @summary 获取练习通知
      * @request GET:/api/edit/games/{id}/notices
      */
     useEditGetGameNotices: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<GameNotice[], RequestResponse>(doFetch ? `/api/edit/games/${id}/notices` : null, options),
 
     /**
-     * @description 获取比赛通知，需要管理员权限
+     * @description 获取练习通知，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGameNotices
-     * @summary 获取比赛通知
+     * @summary 获取练习通知
      * @request GET:/api/edit/games/{id}/notices
      */
     mutateEditGetGameNotices: (id: number, data?: GameNotice[] | Promise<GameNotice[]>, options?: MutatorOptions) =>
       mutate<GameNotice[]>(`/api/edit/games/${id}/notices`, data, options),
 
     /**
-     * @description 获取比赛列表，需要管理员权限
+     * @description 获取练习列表，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGames
-     * @summary 获取比赛列表
+     * @summary 获取练习列表
      * @request GET:/api/edit/games
      */
     editGetGames: (
@@ -3380,11 +3380,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛列表，需要管理员权限
+     * @description 获取练习列表，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGames
-     * @summary 获取比赛列表
+     * @summary 获取练习列表
      * @request GET:/api/edit/games
      */
     useEditGetGames: (
@@ -3399,11 +3399,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => useSWR<ArrayResponseOfGameInfoModel, RequestResponse>(doFetch ? [`/api/edit/games`, query] : null, options),
 
     /**
-     * @description 获取比赛列表，需要管理员权限
+     * @description 获取练习列表，需要管理员权限
      *
      * @tags Edit
      * @name EditGetGames
-     * @summary 获取比赛列表
+     * @summary 获取练习列表
      * @request GET:/api/edit/games
      */
     mutateEditGetGames: (
@@ -3418,11 +3418,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<ArrayResponseOfGameInfoModel>([`/api/edit/games`, query], data, options),
 
     /**
-     * @description 删除比赛题目 Flag，需要管理员权限
+     * @description 删除练习题目 Flag，需要管理员权限
      *
      * @tags Edit
      * @name EditRemoveFlag
-     * @summary 删除比赛题目 Flag
+     * @summary 删除练习题目 Flag
      * @request DELETE:/api/edit/games/{id}/challenges/{cId}/flags/{fId}
      */
     editRemoveFlag: (id: number, cId: number, fId: number, params: RequestParams = {}) =>
@@ -3434,11 +3434,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 删除比赛题目，需要管理员权限
+     * @description 删除练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditRemoveGameChallenge
-     * @summary 删除比赛题目
+     * @summary 删除练习题目
      * @request DELETE:/api/edit/games/{id}/challenges/{cId}
      */
     editRemoveGameChallenge: (id: number, cId: number, params: RequestParams = {}) =>
@@ -3449,11 +3449,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 更新比赛题目附件，需要管理员权限，仅用于非动态附件题目
+     * @description 更新练习题目附件，需要管理员权限，仅用于非动态附件题目
      *
      * @tags Edit
      * @name EditUpdateAttachment
-     * @summary 更新比赛题目附件
+     * @summary 更新练习题目附件
      * @request POST:/api/edit/games/{id}/challenges/{cId}/attachment
      */
     editUpdateAttachment: (id: number, cId: number, data: AttachmentCreateModel, params: RequestParams = {}) =>
@@ -3467,11 +3467,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 修改比赛，需要管理员权限
+     * @description 修改练习，需要管理员权限
      *
      * @tags Edit
      * @name EditUpdateGame
-     * @summary 修改比赛
+     * @summary 修改练习
      * @request PUT:/api/edit/games/{id}
      */
     editUpdateGame: (id: number, data: GameInfoModel, params: RequestParams = {}) =>
@@ -3485,11 +3485,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 修改比赛题目，需要管理员权限
+     * @description 修改练习题目，需要管理员权限
      *
      * @tags Edit
      * @name EditUpdateGameChallenge
-     * @summary 修改比赛题目信息，Flags 不受更改，使用 Flag 相关 API 修改
+     * @summary 修改练习题目信息，Flags 不受更改，使用 Flag 相关 API 修改
      * @request PUT:/api/edit/games/{id}/challenges/{cId}
      */
     editUpdateGameChallenge: (id: number, cId: number, data: ChallengeUpdateModel, params: RequestParams = {}) =>
@@ -3503,11 +3503,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 更新全部比赛题目解出数量，需要管理员权限
+     * @description 更新全部练习题目解出数量，需要管理员权限
      *
      * @tags Edit
      * @name EditUpdateGameChallengesAcceptedCount
-     * @summary 更新全部比赛题目解出数量
+     * @summary 更新全部练习题目解出数量
      * @request POST:/api/edit/games/{id}/challenges/updateaccepted
      */
     editUpdateGameChallengesAcceptedCount: (id: number, params: RequestParams = {}) =>
@@ -3518,11 +3518,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 更新比赛通知，需要管理员权限
+     * @description 更新练习通知，需要管理员权限
      *
      * @tags Edit
      * @name EditUpdateGameNotice
-     * @summary 更新比赛通知
+     * @summary 更新练习通知
      * @request PUT:/api/edit/games/{id}/notices/{noticeId}
      */
     editUpdateGameNotice: (id: number, noticeId: number, data: GameNoticeModel, params: RequestParams = {}) =>
@@ -3536,11 +3536,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 使用此接口更新比赛头图，需要Admin权限
+     * @description 使用此接口更新练习头图，需要Admin权限
      *
      * @tags Edit
      * @name EditUpdateGamePoster
-     * @summary 更新比赛头图
+     * @summary 更新练习头图
      * @request PUT:/api/edit/games/{id}/poster
      */
     editUpdateGamePoster: (
@@ -3580,11 +3580,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
   };
   game = {
     /**
-     * @description 获取比赛的全部题目，需要User权限，需要当前激活队伍已经报名
+     * @description 获取练习的全部题目，需要User权限，需要当前激活队伍已经报名
      *
      * @tags Game
      * @name GameChallengesWithTeamInfo
-     * @summary 获取全部比赛题目信息及当前队伍信息
+     * @summary 获取全部练习题目信息及当前队伍信息
      * @request GET:/api/game/{id}/details
      */
     gameChallengesWithTeamInfo: (id: number, params: RequestParams = {}) =>
@@ -3595,22 +3595,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛的全部题目，需要User权限，需要当前激活队伍已经报名
+     * @description 获取练习的全部题目，需要User权限，需要当前激活队伍已经报名
      *
      * @tags Game
      * @name GameChallengesWithTeamInfo
-     * @summary 获取全部比赛题目信息及当前队伍信息
+     * @summary 获取全部练习题目信息及当前队伍信息
      * @request GET:/api/game/{id}/details
      */
     useGameChallengesWithTeamInfo: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<GameDetailModel, RequestResponse>(doFetch ? `/api/game/${id}/details` : null, options),
 
     /**
-     * @description 获取比赛的全部题目，需要User权限，需要当前激活队伍已经报名
+     * @description 获取练习的全部题目，需要User权限，需要当前激活队伍已经报名
      *
      * @tags Game
      * @name GameChallengesWithTeamInfo
-     * @summary 获取全部比赛题目信息及当前队伍信息
+     * @summary 获取全部练习题目信息及当前队伍信息
      * @request GET:/api/game/{id}/details
      */
     mutateGameChallengesWithTeamInfo: (
@@ -3620,11 +3620,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<GameDetailModel>(`/api/game/${id}/details`, data, options),
 
     /**
-     * @description 获取比赛作弊数据，需要Monitor权限
+     * @description 获取练习作弊数据，需要Monitor权限
      *
      * @tags Game
      * @name GameCheatInfo
-     * @summary 获取比赛作弊信息
+     * @summary 获取练习作弊信息
      * @request GET:/api/game/{id}/cheatinfo
      */
     gameCheatInfo: (id: number, params: RequestParams = {}) =>
@@ -3635,22 +3635,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛作弊数据，需要Monitor权限
+     * @description 获取练习作弊数据，需要Monitor权限
      *
      * @tags Game
      * @name GameCheatInfo
-     * @summary 获取比赛作弊信息
+     * @summary 获取练习作弊信息
      * @request GET:/api/game/{id}/cheatinfo
      */
     useGameCheatInfo: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<CheatInfoModel[], RequestResponse>(doFetch ? `/api/game/${id}/cheatinfo` : null, options),
 
     /**
-     * @description 获取比赛作弊数据，需要Monitor权限
+     * @description 获取练习作弊数据，需要Monitor权限
      *
      * @tags Game
      * @name GameCheatInfo
-     * @summary 获取比赛作弊信息
+     * @summary 获取练习作弊信息
      * @request GET:/api/game/{id}/cheatinfo
      */
     mutateGameCheatInfo: (id: number, data?: CheatInfoModel[] | Promise<CheatInfoModel[]>, options?: MutatorOptions) =>
@@ -3718,11 +3718,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 获取比赛事件数据，需要Monitor权限
+     * @description 获取练习事件数据，需要Monitor权限
      *
      * @tags Game
      * @name GameEvents
-     * @summary 获取比赛事件
+     * @summary 获取练习事件
      * @request GET:/api/game/{id}/events
      */
     gameEvents: (
@@ -3754,11 +3754,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛事件数据，需要Monitor权限
+     * @description 获取练习事件数据，需要Monitor权限
      *
      * @tags Game
      * @name GameEvents
-     * @summary 获取比赛事件
+     * @summary 获取练习事件
      * @request GET:/api/game/{id}/events
      */
     useGameEvents: (
@@ -3785,11 +3785,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => useSWR<GameEvent[], RequestResponse>(doFetch ? [`/api/game/${id}/events`, query] : null, options),
 
     /**
-     * @description 获取比赛事件数据，需要Monitor权限
+     * @description 获取练习事件数据，需要Monitor权限
      *
      * @tags Game
      * @name GameEvents
-     * @summary 获取比赛事件
+     * @summary 获取练习事件
      * @request GET:/api/game/{id}/events
      */
     mutateGameEvents: (
@@ -3832,11 +3832,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 获取比赛的详细信息
+     * @description 获取练习的详细信息
      *
      * @tags Game
      * @name GameGames
-     * @summary 获取比赛详细信息
+     * @summary 获取练习详细信息
      * @request GET:/api/game/{id}
      */
     gameGames: (id: number, params: RequestParams = {}) =>
@@ -3847,22 +3847,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛的详细信息
+     * @description 获取练习的详细信息
      *
      * @tags Game
      * @name GameGames
-     * @summary 获取比赛详细信息
+     * @summary 获取练习详细信息
      * @request GET:/api/game/{id}
      */
     useGameGames: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<DetailedGameInfoModel, RequestResponse>(doFetch ? `/api/game/${id}` : null, options),
 
     /**
-     * @description 获取比赛的详细信息
+     * @description 获取练习的详细信息
      *
      * @tags Game
      * @name GameGames
-     * @summary 获取比赛详细信息
+     * @summary 获取练习详细信息
      * @request GET:/api/game/{id}
      */
     mutateGameGames: (
@@ -3872,11 +3872,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<DetailedGameInfoModel>(`/api/game/${id}`, data, options),
 
     /**
-     * @description 获取最近十个比赛
+     * @description 获取最近十个练习
      *
      * @tags Game
      * @name GameGamesAll
-     * @summary 获取最新的比赛
+     * @summary 获取最新的练习
      * @request GET:/api/game
      */
     gameGamesAll: (params: RequestParams = {}) =>
@@ -3887,22 +3887,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取最近十个比赛
+     * @description 获取最近十个练习
      *
      * @tags Game
      * @name GameGamesAll
-     * @summary 获取最新的比赛
+     * @summary 获取最新的练习
      * @request GET:/api/game
      */
     useGameGamesAll: (options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<BasicGameInfoModel[], RequestResponse>(doFetch ? `/api/game` : null, options),
 
     /**
-     * @description 获取最近十个比赛
+     * @description 获取最近十个练习
      *
      * @tags Game
      * @name GameGamesAll
-     * @summary 获取最新的比赛
+     * @summary 获取最新的练习
      * @request GET:/api/game
      */
     mutateGameGamesAll: (data?: BasicGameInfoModel[] | Promise<BasicGameInfoModel[]>, options?: MutatorOptions) =>
@@ -3924,11 +3924,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 获取比赛题目信息，需要User权限，需要当前激活队伍已经报名
+     * @description 获取练习题目信息，需要User权限，需要当前激活队伍已经报名
      *
      * @tags Game
      * @name GameGetChallenge
-     * @summary 获取比赛题目信息
+     * @summary 获取练习题目信息
      * @request GET:/api/game/{id}/challenges/{challengeId}
      */
     gameGetChallenge: (id: number, challengeId: number, params: RequestParams = {}) =>
@@ -3939,11 +3939,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛题目信息，需要User权限，需要当前激活队伍已经报名
+     * @description 获取练习题目信息，需要User权限，需要当前激活队伍已经报名
      *
      * @tags Game
      * @name GameGetChallenge
-     * @summary 获取比赛题目信息
+     * @summary 获取练习题目信息
      * @request GET:/api/game/{id}/challenges/{challengeId}
      */
     useGameGetChallenge: (id: number, challengeId: number, options?: SWRConfiguration, doFetch: boolean = true) =>
@@ -3953,11 +3953,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       ),
 
     /**
-     * @description 获取比赛题目信息，需要User权限，需要当前激活队伍已经报名
+     * @description 获取练习题目信息，需要User权限，需要当前激活队伍已经报名
      *
      * @tags Game
      * @name GameGetChallenge
-     * @summary 获取比赛题目信息
+     * @summary 获取练习题目信息
      * @request GET:/api/game/{id}/challenges/{challengeId}
      */
     mutateGameGetChallenge: (
@@ -3968,11 +3968,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<ChallengeDetailModel>(`/api/game/${id}/challenges/${challengeId}`, data, options),
 
     /**
-     * @description 获取开启了流量捕获的比赛题目，需要Monitor权限
+     * @description 获取开启了流量捕获的练习题目，需要Monitor权限
      *
      * @tags Game
      * @name GameGetChallengesWithTrafficCapturing
-     * @summary 获取开启了流量捕获的比赛题目
+     * @summary 获取开启了流量捕获的练习题目
      * @request GET:/api/game/games/{id}/captures
      */
     gameGetChallengesWithTrafficCapturing: (id: number, params: RequestParams = {}) =>
@@ -3983,22 +3983,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取开启了流量捕获的比赛题目，需要Monitor权限
+     * @description 获取开启了流量捕获的练习题目，需要Monitor权限
      *
      * @tags Game
      * @name GameGetChallengesWithTrafficCapturing
-     * @summary 获取开启了流量捕获的比赛题目
+     * @summary 获取开启了流量捕获的练习题目
      * @request GET:/api/game/games/{id}/captures
      */
     useGameGetChallengesWithTrafficCapturing: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<ChallengeTrafficModel[], RequestResponse>(doFetch ? `/api/game/games/${id}/captures` : null, options),
 
     /**
-     * @description 获取开启了流量捕获的比赛题目，需要Monitor权限
+     * @description 获取开启了流量捕获的练习题目，需要Monitor权限
      *
      * @tags Game
      * @name GameGetChallengesWithTrafficCapturing
-     * @summary 获取开启了流量捕获的比赛题目
+     * @summary 获取开启了流量捕获的练习题目
      * @request GET:/api/game/games/{id}/captures
      */
     mutateGameGetChallengesWithTrafficCapturing: (
@@ -4008,11 +4008,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<ChallengeTrafficModel[]>(`/api/game/games/${id}/captures`, data, options),
 
     /**
-     * @description 获取比赛题目中捕获到到队伍信息，需要Monitor权限
+     * @description 获取练习题目中捕获到到队伍信息，需要Monitor权限
      *
      * @tags Game
      * @name GameGetChallengeTraffic
-     * @summary 获取比赛题目中捕获到到队伍信息
+     * @summary 获取练习题目中捕获到到队伍信息
      * @request GET:/api/game/captures/{challengeId}
      */
     gameGetChallengeTraffic: (challengeId: number, params: RequestParams = {}) =>
@@ -4023,22 +4023,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛题目中捕获到到队伍信息，需要Monitor权限
+     * @description 获取练习题目中捕获到到队伍信息，需要Monitor权限
      *
      * @tags Game
      * @name GameGetChallengeTraffic
-     * @summary 获取比赛题目中捕获到到队伍信息
+     * @summary 获取练习题目中捕获到到队伍信息
      * @request GET:/api/game/captures/{challengeId}
      */
     useGameGetChallengeTraffic: (challengeId: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<TeamTrafficModel[], RequestResponse>(doFetch ? `/api/game/captures/${challengeId}` : null, options),
 
     /**
-     * @description 获取比赛题目中捕获到到队伍信息，需要Monitor权限
+     * @description 获取练习题目中捕获到到队伍信息，需要Monitor权限
      *
      * @tags Game
      * @name GameGetChallengeTraffic
-     * @summary 获取比赛题目中捕获到到队伍信息
+     * @summary 获取练习题目中捕获到到队伍信息
      * @request GET:/api/game/captures/{challengeId}
      */
     mutateGameGetChallengeTraffic: (
@@ -4063,11 +4063,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 获取比赛题目中捕获到到队伍的流量包列表，需要Monitor权限
+     * @description 获取练习题目中捕获到到队伍的流量包列表，需要Monitor权限
      *
      * @tags Game
      * @name GameGetTeamTrafficAll
-     * @summary 获取比赛题目中捕获到到队伍的流量包列表
+     * @summary 获取练习题目中捕获到到队伍的流量包列表
      * @request GET:/api/game/captures/{challengeId}/{partId}
      */
     gameGetTeamTrafficAll: (challengeId: number, partId: number, params: RequestParams = {}) =>
@@ -4078,11 +4078,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛题目中捕获到到队伍的流量包列表，需要Monitor权限
+     * @description 获取练习题目中捕获到到队伍的流量包列表，需要Monitor权限
      *
      * @tags Game
      * @name GameGetTeamTrafficAll
-     * @summary 获取比赛题目中捕获到到队伍的流量包列表
+     * @summary 获取练习题目中捕获到到队伍的流量包列表
      * @request GET:/api/game/captures/{challengeId}/{partId}
      */
     useGameGetTeamTrafficAll: (
@@ -4093,11 +4093,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => useSWR<FileRecord[], RequestResponse>(doFetch ? `/api/game/captures/${challengeId}/${partId}` : null, options),
 
     /**
-     * @description 获取比赛题目中捕获到到队伍的流量包列表，需要Monitor权限
+     * @description 获取练习题目中捕获到到队伍的流量包列表，需要Monitor权限
      *
      * @tags Game
      * @name GameGetTeamTrafficAll
-     * @summary 获取比赛题目中捕获到到队伍的流量包列表
+     * @summary 获取练习题目中捕获到到队伍的流量包列表
      * @request GET:/api/game/captures/{challengeId}/{partId}
      */
     mutateGameGetTeamTrafficAll: (
@@ -4148,11 +4148,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<BasicWriteupInfoModel>(`/api/game/${id}/writeup`, data, options),
 
     /**
-     * @description 加入一场比赛，需要User权限
+     * @description 加入一场练习，需要User权限
      *
      * @tags Game
      * @name GameJoinGame
-     * @summary 加入一个比赛
+     * @summary 加入一个练习
      * @request POST:/api/game/{id}
      */
     gameJoinGame: (id: number, data: GameJoinModel, params: RequestParams = {}) =>
@@ -4165,11 +4165,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 退出一场比赛，需要User权限
+     * @description 退出一场练习，需要User权限
      *
      * @tags Game
      * @name GameLeaveGame
-     * @summary 退出一个比赛
+     * @summary 退出一个练习
      * @request DELETE:/api/game/{id}
      */
     gameLeaveGame: (id: number, params: RequestParams = {}) =>
@@ -4180,11 +4180,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       }),
 
     /**
-     * @description 获取比赛通知数据
+     * @description 获取练习通知数据
      *
      * @tags Game
      * @name GameNotices
-     * @summary 获取比赛通知
+     * @summary 获取练习通知
      * @request GET:/api/game/{id}/notices
      */
     gameNotices: (
@@ -4211,11 +4211,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛通知数据
+     * @description 获取练习通知数据
      *
      * @tags Game
      * @name GameNotices
-     * @summary 获取比赛通知
+     * @summary 获取练习通知
      * @request GET:/api/game/{id}/notices
      */
     useGameNotices: (
@@ -4237,11 +4237,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => useSWR<GameNotice[], RequestResponse>(doFetch ? [`/api/game/${id}/notices`, query] : null, options),
 
     /**
-     * @description 获取比赛通知数据
+     * @description 获取练习通知数据
      *
      * @tags Game
      * @name GameNotices
-     * @summary 获取比赛通知
+     * @summary 获取练习通知
      * @request GET:/api/game/{id}/notices
      */
     mutateGameNotices: (
@@ -4263,11 +4263,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<GameNotice[]>([`/api/game/${id}/notices`, query], data, options),
 
     /**
-     * @description 获取比赛的全部题目参与信息，需要Admin权限
+     * @description 获取练习的全部题目参与信息，需要Admin权限
      *
      * @tags Game
      * @name GameParticipations
-     * @summary 获取全部比赛参与信息
+     * @summary 获取全部练习参与信息
      * @request GET:/api/game/{id}/participations
      */
     gameParticipations: (id: number, params: RequestParams = {}) =>
@@ -4278,22 +4278,22 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛的全部题目参与信息，需要Admin权限
+     * @description 获取练习的全部题目参与信息，需要Admin权限
      *
      * @tags Game
      * @name GameParticipations
-     * @summary 获取全部比赛参与信息
+     * @summary 获取全部练习参与信息
      * @request GET:/api/game/{id}/participations
      */
     useGameParticipations: (id: number, options?: SWRConfiguration, doFetch: boolean = true) =>
       useSWR<ParticipationInfoModel[], RequestResponse>(doFetch ? `/api/game/${id}/participations` : null, options),
 
     /**
-     * @description 获取比赛的全部题目参与信息，需要Admin权限
+     * @description 获取练习的全部题目参与信息，需要Admin权限
      *
      * @tags Game
      * @name GameParticipations
-     * @summary 获取全部比赛参与信息
+     * @summary 获取全部练习参与信息
      * @request GET:/api/game/{id}/participations
      */
     mutateGameParticipations: (
@@ -4340,11 +4340,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
       mutate<ScoreboardModel>(`/api/game/${id}/scoreboard`, data, options),
 
     /**
-     * @description 下载比赛积分榜，需要Monitor权限
+     * @description 下载练习积分榜，需要Monitor权限
      *
      * @tags Game
      * @name GameScoreboardSheet
-     * @summary 下载比赛积分榜
+     * @summary 下载练习积分榜
      * @request GET:/api/game/{id}/scoreboardsheet
      */
     gameScoreboardSheet: (id: number, params: RequestParams = {}) =>
@@ -4406,11 +4406,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<AnswerResult>(`/api/game/${id}/challenges/${challengeId}/status/${submitId}`, data, options),
 
     /**
-     * @description 获取比赛提交数据，需要Monitor权限
+     * @description 获取练习提交数据，需要Monitor权限
      *
      * @tags Game
      * @name GameSubmissions
-     * @summary 获取比赛提交
+     * @summary 获取练习提交
      * @request GET:/api/game/{id}/submissions
      */
     gameSubmissions: (
@@ -4439,11 +4439,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
         ...params,
       }),
     /**
-     * @description 获取比赛提交数据，需要Monitor权限
+     * @description 获取练习提交数据，需要Monitor权限
      *
      * @tags Game
      * @name GameSubmissions
-     * @summary 获取比赛提交
+     * @summary 获取练习提交
      * @request GET:/api/game/{id}/submissions
      */
     useGameSubmissions: (
@@ -4467,11 +4467,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => useSWR<Submission[], RequestResponse>(doFetch ? [`/api/game/${id}/submissions`, query] : null, options),
 
     /**
-     * @description 获取比赛提交数据，需要Monitor权限
+     * @description 获取练习提交数据，需要Monitor权限
      *
      * @tags Game
      * @name GameSubmissions
-     * @summary 获取比赛提交
+     * @summary 获取练习提交
      * @request GET:/api/game/{id}/submissions
      */
     mutateGameSubmissions: (
@@ -4495,11 +4495,11 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     ) => mutate<Submission[]>([`/api/game/${id}/submissions`, query], data, options),
 
     /**
-     * @description 下载比赛全部提交，需要Monitor权限
+     * @description 下载练习全部提交，需要Monitor权限
      *
      * @tags Game
      * @name GameSubmissionSheet
-     * @summary 下载比赛全部提交
+     * @summary 下载练习全部提交
      * @request GET:/api/game/{id}/submissionsheet
      */
     gameSubmissionSheet: (id: number, params: RequestParams = {}) =>

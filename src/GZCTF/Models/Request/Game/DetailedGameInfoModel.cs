@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 namespace GZCTF.Models.Request.Game;
 
 /// <summary>
-/// 比赛详细信息，包含详细介绍与当前队伍报名状态
+/// 练习详细信息，包含详细介绍与当前队伍报名状态
 /// </summary>
 public class DetailedGameInfoModel
 {
@@ -12,22 +12,22 @@ public class DetailedGameInfoModel
     public int Id { get; set; }
 
     /// <summary>
-    /// 比赛标题
+    /// 练习标题
     /// </summary>
     public string Title { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛描述
+    /// 练习描述
     /// </summary>
     public string Summary { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛详细介绍
+    /// 练习详细介绍
     /// </summary>
     public string Content { get; set; } = string.Empty;
 
     /// <summary>
-    /// 是否为隐藏比赛
+    /// 是否为隐藏练习
     /// </summary>
     public bool Hidden { get; set; }
 
@@ -52,7 +52,7 @@ public class DetailedGameInfoModel
     public bool WriteupRequired { get; set; }
 
     /// <summary>
-    /// 比赛头图
+    /// 练习头图
     /// </summary>
     [JsonPropertyName("poster")]
     public string? PosterUrl { get; set; } = string.Empty;
@@ -79,7 +79,7 @@ public class DetailedGameInfoModel
     public string? TeamName { get; set; }
 
     /// <summary>
-    /// 比赛是否为练习模式（比赛结束够依然可以访问）
+    /// 练习是否为练习模式（练习结束够依然可以访问）
     /// </summary>
     public bool PracticeMode { get; set; } = true;
 

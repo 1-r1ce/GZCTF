@@ -86,13 +86,13 @@ public class Submission
     public Participation Participation { get; set; } = default!;
 
     /// <summary>
-    /// 比赛Id
+    /// 练习Id
     /// </summary>
     [JsonIgnore]
     public int GameId { get; set; }
 
     /// <summary>
-    /// 比赛
+    /// 练习
     /// </summary>
     [JsonIgnore]
     public Game Game { get; set; } = default!;

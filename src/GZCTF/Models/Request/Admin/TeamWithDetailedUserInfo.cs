@@ -3,7 +3,7 @@
 namespace GZCTF.Models.Request.Admin;
 
 /// <summary>
-/// 比赛队伍详细信息，用于审核查看（Admin）
+/// 练习队伍详细信息，用于审核查看（Admin）
 /// </summary>
 public class TeamWithDetailedUserInfo
 {

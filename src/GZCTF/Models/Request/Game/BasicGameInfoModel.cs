@@ -5,7 +5,7 @@ using MemoryPack;
 namespace GZCTF.Models.Request.Game;
 
 /// <summary>
-/// 比赛基本信息，不包含详细介绍与当前队伍报名状态
+/// 练习基本信息，不包含详细介绍与当前队伍报名状态
 /// </summary>
 [MemoryPackable]
 public partial class BasicGameInfoModel
@@ -14,12 +14,12 @@ public partial class BasicGameInfoModel
     public int Id { get; set; }
 
     /// <summary>
-    /// 比赛标题
+    /// 练习标题
     /// </summary>
     public string Title { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛描述
+    /// 练习描述
     /// </summary>
     public string Summary { get; set; } = string.Empty;
 

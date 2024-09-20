@@ -17,7 +17,7 @@ public class Game
     public int Id { get; set; }
 
     /// <summary>
-    /// 比赛标题
+    /// 练习标题
     /// </summary>
     [Required]
     public string Title { get; set; } = string.Empty;
@@ -49,12 +49,12 @@ public class Game
     public string? PosterHash { get; set; }
 
     /// <summary>
-    /// 比赛描述
+    /// 练习描述
     /// </summary>
     public string Summary { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛详细介绍
+    /// 练习详细介绍
     /// </summary>
     public string Content { get; set; } = string.Empty;
 
@@ -69,7 +69,7 @@ public class Game
     public bool WriteupRequired { get; set; }
 
     /// <summary>
-    /// 比赛邀请码
+    /// 练习邀请码
     /// </summary>
     [MaxLength(Limits.InviteTokenLength)]
     public string? InviteCode { get; set; }
@@ -193,43 +193,43 @@ public class Game
     #region Db Relationship
 
     /// <summary>
-    /// 比赛事件
+    /// 练习事件
     /// </summary>
     [JsonIgnore]
     public List<GameEvent> GameEvents { get; set; } = [];
 
     /// <summary>
-    /// 比赛通知
+    /// 练习通知
     /// </summary>
     [JsonIgnore]
     public List<GameNotice> GameNotices { get; set; } = [];
 
     /// <summary>
-    /// 比赛题目
+    /// 练习题目
     /// </summary>
     [JsonIgnore]
     public List<GameChallenge> Challenges { get; set; } = [];
 
     /// <summary>
-    /// 比赛提交
+    /// 练习提交
     /// </summary>
     [JsonIgnore]
     public List<Submission> Submissions { get; set; } = [];
 
     /// <summary>
-    /// 比赛队伍参赛对象
+    /// 练习队伍参赛对象
     /// </summary>
     [JsonIgnore]
     public HashSet<Participation> Participations { get; set; } = [];
 
     /// <summary>
-    /// 比赛队伍
+    /// 练习队伍
     /// </summary>
     [JsonIgnore]
     public ICollection<Team>? Teams { get; set; }
 
     /// <summary>
-    /// 比赛是否为练习模式（比赛结束够依然可以进行大部分操作）
+    /// 练习是否为练习模式（练习结束够依然可以进行大部分操作）
     /// </summary>
     public bool PracticeMode { get; set; } = true;
 

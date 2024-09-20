@@ -23,7 +23,7 @@ public interface ICheatInfoRepository : IRepository
     /// <summary>
     /// 获取作弊信息对象
     /// </summary>
-    /// <param name="gameId">比赛Id</param>
+    /// <param name="gameId">练习Id</param>
     /// <param name="token"></param>
     /// <returns></returns>
     public Task<CheatInfo[]> GetCheatInfoByGameId(int gameId, CancellationToken token = default);

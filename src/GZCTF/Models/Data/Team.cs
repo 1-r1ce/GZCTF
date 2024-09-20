@@ -77,12 +77,12 @@ public class Team
     public UserInfo? Captain { get; set; }
 
     /// <summary>
-    /// 比赛参与对象
+    /// 练习参与对象
     /// </summary>
     public List<Participation> Participations { get; set; } = [];
 
     /// <summary>
-    /// 比赛对象
+    /// 练习对象
     /// </summary>
     public HashSet<Game>? Games { get; set; }
 

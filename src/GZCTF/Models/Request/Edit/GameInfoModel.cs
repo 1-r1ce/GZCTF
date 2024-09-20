@@ -4,17 +4,17 @@ using System.Text.Json.Serialization;
 namespace GZCTF.Models.Request.Edit;
 
 /// <summary>
-/// 比赛信息（Edit）
+/// 练习信息（Edit）
 /// </summary>
 public class GameInfoModel
 {
     /// <summary>
-    /// 比赛 Id
+    /// 练习 Id
     /// </summary>
     public int Id { get; set; }
 
     /// <summary>
-    /// 比赛标题
+    /// 练习标题
     /// </summary>
     [Required]
     public string Title { get; set; } = string.Empty;
@@ -25,12 +25,12 @@ public class GameInfoModel
     public bool Hidden { get; set; }
 
     /// <summary>
-    /// 比赛描述
+    /// 练习描述
     /// </summary>
     public string Summary { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛详细介绍
+    /// 练习详细介绍
     /// </summary>
     public string Content { get; set; } = string.Empty;
 
@@ -45,7 +45,7 @@ public class GameInfoModel
     public bool WriteupRequired { get; set; }
 
     /// <summary>
-    /// 比赛邀请码
+    /// 练习邀请码
     /// </summary>
     [MaxLength(Limits.InviteTokenLength,
         ErrorMessageResourceName = nameof(Resources.Program.Model_InvitationCodeTooLong),
@@ -68,18 +68,18 @@ public class GameInfoModel
     public int ContainerCountLimit { get; set; } = 3;
 
     /// <summary>
-    /// 比赛头图
+    /// 练习头图
     /// </summary>
     [JsonPropertyName("poster")]
     public string? PosterUrl { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛签名公钥
+    /// 练习签名公钥
     /// </summary>
     public string PublicKey { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛是否为练习模式（比赛结束够依然可以访问）
+    /// 练习是否为练习模式（练习结束够依然可以访问）
     /// </summary>
     public bool PracticeMode { get; set; } = true;
 

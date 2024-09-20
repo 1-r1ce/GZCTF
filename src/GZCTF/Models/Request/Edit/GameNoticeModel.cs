@@ -3,7 +3,7 @@
 namespace GZCTF.Models.Request.Edit;
 
 /// <summary>
-/// 比赛通知（Edit）
+/// 练习通知（Edit）
 /// </summary>
 public class GameNoticeModel
 {

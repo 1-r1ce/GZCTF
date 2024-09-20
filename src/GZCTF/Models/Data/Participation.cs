@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace GZCTF.Models.Data;
 
 /// <summary>
-/// 比赛参与信息
+/// 练习参与信息
 /// </summary>
 [Index(nameof(GameId))]
 [Index(nameof(TeamId))]

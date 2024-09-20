@@ -111,14 +111,14 @@ public class EditController(
     }
 
     /// <summary>
-    /// 添加比赛
+    /// 添加练习
     /// </summary>
     /// <remarks>
-    /// 添加比赛，需要管理员权限
+    /// 添加练习，需要管理员权限
     /// </remarks>
     /// <param name="model"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛</response>
+    /// <response code="200">成功添加练习</response>
     [HttpPost("Games")]
     [ProducesResponseType(typeof(GameInfoModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status400BadRequest)]
@@ -135,15 +135,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 获取比赛列表
+    /// 获取练习列表
     /// </summary>
     /// <remarks>
-    /// 获取比赛列表，需要管理员权限
+    /// 获取练习列表，需要管理员权限
     /// </remarks>
     /// <param name="count"></param>
     /// <param name="skip"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功获取比赛列表</response>
+    /// <response code="200">成功获取练习列表</response>
     [HttpGet("Games")]
     [ProducesResponseType(typeof(ArrayResponse<GameInfoModel>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetGames([FromQuery] int count, [FromQuery] int skip, CancellationToken token) =>
@@ -152,14 +152,14 @@ public class EditController(
             .ToResponse(await gameRepository.CountAsync(token)));
 
     /// <summary>
-    /// 获取比赛
+    /// 获取练习
     /// </summary>
     /// <remarks>
-    /// 获取比赛，需要管理员权限
+    /// 获取练习，需要管理员权限
     /// </remarks>
     /// <param name="id"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功获取比赛</response>
+    /// <response code="200">成功获取练习</response>
     [HttpGet("Games/{id:int}")]
     [ProducesResponseType(typeof(GameInfoModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -175,14 +175,14 @@ public class EditController(
     }
 
     /// <summary>
-    /// 获取比赛哈希盐
+    /// 获取练习哈希盐
     /// </summary>
     /// <remarks>
-    /// 获取比赛哈希盐，需要管理员权限
+    /// 获取练习哈希盐，需要管理员权限
     /// </remarks>
     /// <param name="id"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功获取比赛哈希加盐</response>
+    /// <response code="200">成功获取练习哈希加盐</response>
     [OpenApiIgnore]
     [HttpGet("Games/{id:int}/HashSalt")]
     [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
@@ -199,15 +199,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 修改比赛
+    /// 修改练习
     /// </summary>
     /// <remarks>
-    /// 修改比赛，需要管理员权限
+    /// 修改练习，需要管理员权限
     /// </remarks>
     /// <param name="id"></param>
     /// <param name="model"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功修改比赛</response>
+    /// <response code="200">成功修改练习</response>
     [HttpPut("Games/{id:int}")]
     [ProducesResponseType(typeof(GameInfoModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -229,14 +229,14 @@ public class EditController(
     }
 
     /// <summary>
-    /// 删除比赛
+    /// 删除练习
     /// </summary>
     /// <remarks>
-    /// 删除比赛，需要管理员权限
+    /// 删除练习，需要管理员权限
     /// </remarks>
     /// <param name="id"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功删除比赛</response>
+    /// <response code="200">成功删除练习</response>
     [HttpDelete("Games/{id:int}")]
     [ProducesResponseType(typeof(GameInfoModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status400BadRequest)]
@@ -258,14 +258,14 @@ public class EditController(
     }
 
     /// <summary>
-    /// 删除比赛的全部 WriteUp
+    /// 删除练习的全部 WriteUp
     /// </summary>
     /// <remarks>
-    /// 删除比赛的全部 WriteUp，需要管理员权限
+    /// 删除练习的全部 WriteUp，需要管理员权限
     /// </remarks>
     /// <param name="id"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功删除比赛 WriteUps</response>
+    /// <response code="200">成功删除练习 WriteUps</response>
     [HttpDelete("Games/{id:int}/WriteUps")]
     [ProducesResponseType(typeof(GameInfoModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -283,12 +283,12 @@ public class EditController(
     }
 
     /// <summary>
-    /// 更新比赛头图
+    /// 更新练习头图
     /// </summary>
     /// <remarks>
-    /// 使用此接口更新比赛头图，需要Admin权限
+    /// 使用此接口更新练习头图，需要Admin权限
     /// </remarks>
-    /// <response code="200">比赛头图URL</response>
+    /// <response code="200">练习头图URL</response>
     /// <response code="400">非法请求</response>
     /// <response code="401">未授权用户</response>
     [HttpPut("Games/{id:int}/Poster")]
@@ -322,15 +322,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 添加比赛通知
+    /// 添加练习通知
     /// </summary>
     /// <remarks>
-    /// 添加比赛通知，需要管理员权限
+    /// 添加练习通知，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="model">通知内容</param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛通知</response>
+    /// <response code="200">成功添加练习通知</response>
     [HttpPost("Games/{id:int}/Notices")]
     [ProducesResponseType(typeof(GameNotice), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -356,14 +356,14 @@ public class EditController(
     }
 
     /// <summary>
-    /// 获取比赛通知
+    /// 获取练习通知
     /// </summary>
     /// <remarks>
-    /// 获取比赛通知，需要管理员权限
+    /// 获取练习通知，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功获取比赛通知</response>
+    /// <response code="200">成功获取练习通知</response>
     [HttpGet("Games/{id:int}/Notices")]
     [ProducesResponseType(typeof(GameNotice[]), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -379,12 +379,12 @@ public class EditController(
     }
 
     /// <summary>
-    /// 更新比赛通知
+    /// 更新练习通知
     /// </summary>
     /// <remarks>
-    /// 更新比赛通知，需要管理员权限
+    /// 更新练习通知，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="noticeId">通知Id</param>
     /// <param name="model">通知内容</param>
     /// <param name="token"></param>
@@ -409,12 +409,12 @@ public class EditController(
     }
 
     /// <summary>
-    /// 删除比赛通知
+    /// 删除练习通知
     /// </summary>
     /// <remarks>
-    /// 删除比赛通知，需要管理员权限
+    /// 删除练习通知，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="noticeId">文章Id</param>
     /// <param name="token"></param>
     /// <response code="200">成功删除文章</response>
@@ -441,15 +441,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 添加比赛题目
+    /// 添加练习题目
     /// </summary>
     /// <remarks>
-    /// 添加比赛题目，需要管理员权限
+    /// 添加练习题目，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="model"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目</response>
+    /// <response code="200">成功添加练习题目</response>
     [HttpPost("Games/{id:int}/Challenges")]
     [ProducesResponseType(typeof(ChallengeEditDetailModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -469,28 +469,28 @@ public class EditController(
     }
 
     /// <summary>
-    /// 获取全部比赛题目
+    /// 获取全部练习题目
     /// </summary>
     /// <remarks>
-    /// 获取全部比赛题目，需要管理员权限
+    /// 获取全部练习题目，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功获取比赛题目</response>
+    /// <response code="200">成功获取练习题目</response>
     [HttpGet("Games/{id:int}/Challenges")]
     [ProducesResponseType(typeof(ChallengeInfoModel[]), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetGameChallenges([FromRoute] int id, CancellationToken token) =>
         Ok((await challengeRepository.GetChallenges(id, token)).Select(ChallengeInfoModel.FromChallenge));
 
     /// <summary>
-    /// 更新全部比赛题目解出数量
+    /// 更新全部练习题目解出数量
     /// </summary>
     /// <remarks>
-    /// 更新全部比赛题目解出数量，需要管理员权限
+    /// 更新全部练习题目解出数量，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功获取比赛题目</response>
+    /// <response code="200">成功获取练习题目</response>
     [HttpPost("Games/{id:int}/Challenges/UpdateAccepted")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> UpdateGameChallengesAcceptedCount([FromRoute] int id, CancellationToken token)
@@ -509,15 +509,15 @@ public class EditController(
 
 
     /// <summary>
-    /// 获取比赛题目
+    /// 获取练习题目
     /// </summary>
     /// <remarks>
-    /// 获取比赛题目，需要管理员权限
+    /// 获取练习题目，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目</response>
+    /// <response code="200">成功添加练习题目</response>
     [HttpGet("Games/{id:int}/Challenges/{cId:int}")]
     [ProducesResponseType(typeof(ChallengeEditDetailModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -539,16 +539,16 @@ public class EditController(
     }
 
     /// <summary>
-    /// 修改比赛题目信息，Flags 不受更改，使用 Flag 相关 API 修改
+    /// 修改练习题目信息，Flags 不受更改，使用 Flag 相关 API 修改
     /// </summary>
     /// <remarks>
-    /// 修改比赛题目，需要管理员权限
+    /// 修改练习题目，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="model">题目信息</param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目</response>
+    /// <response code="200">成功添加练习题目</response>
     [HttpPut("Games/{id:int}/Challenges/{cId:int}")]
     [ProducesResponseType(typeof(ChallengeEditDetailModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -615,15 +615,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 测试比赛题目容器
+    /// 测试练习题目容器
     /// </summary>
     /// <remarks>
-    /// 测试比赛题目容器，需要管理员权限
+    /// 测试练习题目容器，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功开启比赛题目容器</response>
+    /// <response code="200">成功开启练习题目容器</response>
     [HttpPost("Games/{id:int}/Challenges/{cId:int}/Container")]
     [ProducesResponseType(typeof(ContainerInfoModel), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -681,15 +681,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 关闭测试比赛题目容器
+    /// 关闭测试练习题目容器
     /// </summary>
     /// <remarks>
-    /// 关闭测试比赛题目容器，需要管理员权限
+    /// 关闭测试练习题目容器，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目</response>
+    /// <response code="200">成功添加练习题目</response>
     [HttpDelete("Games/{id:int}/Challenges/{cId:int}/Container")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -717,15 +717,15 @@ public class EditController(
     }
 
     /// <summary>
-    /// 删除比赛题目
+    /// 删除练习题目
     /// </summary>
     /// <remarks>
-    /// 删除比赛题目，需要管理员权限
+    /// 删除练习题目，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目</response>
+    /// <response code="200">成功添加练习题目</response>
     [HttpDelete("Games/{id:int}/Challenges/{cId:int}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -753,16 +753,16 @@ public class EditController(
     }
 
     /// <summary>
-    /// 更新比赛题目附件
+    /// 更新练习题目附件
     /// </summary>
     /// <remarks>
-    /// 更新比赛题目附件，需要管理员权限，仅用于非动态附件题目
+    /// 更新练习题目附件，需要管理员权限，仅用于非动态附件题目
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="model"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目数量</response>
+    /// <response code="200">成功添加练习题目数量</response>
     [HttpPost("Games/{id:int}/Challenges/{cId:int}/Attachment")]
     [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -791,16 +791,16 @@ public class EditController(
     }
 
     /// <summary>
-    /// 添加比赛题目 Flag
+    /// 添加练习题目 Flag
     /// </summary>
     /// <remarks>
-    /// 添加比赛题目 Flag，需要管理员权限
+    /// 添加练习题目 Flag，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="models"></param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目数量</response>
+    /// <response code="200">成功添加练习题目数量</response>
     [HttpPost("Games/{id:int}/Challenges/{cId:int}/Flags")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -825,16 +825,16 @@ public class EditController(
     }
 
     /// <summary>
-    /// 删除比赛题目 Flag
+    /// 删除练习题目 Flag
     /// </summary>
     /// <remarks>
-    /// 删除比赛题目 Flag，需要管理员权限
+    /// 删除练习题目 Flag，需要管理员权限
     /// </remarks>
-    /// <param name="id">比赛Id</param>
+    /// <param name="id">练习Id</param>
     /// <param name="cId">题目Id</param>
     /// <param name="fId">Flag ID</param>
     /// <param name="token"></param>
-    /// <response code="200">成功添加比赛题目</response>
+    /// <response code="200">成功添加练习题目</response>
     [HttpDelete("Games/{id:int}/Challenges/{cId:int}/Flags/{fId:int}")]
     [ProducesResponseType(typeof(TaskStatus), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]

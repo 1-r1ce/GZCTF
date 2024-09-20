@@ -14,7 +14,7 @@ public class SignatureVerifyModel
     public string TeamToken { get; set; } = string.Empty;
 
     /// <summary>
-    /// 比赛公钥，Base64 编码
+    /// 练习公钥，Base64 编码
     /// </summary>
     [Required]
     public string PublicKey { get; set; } = string.Empty;

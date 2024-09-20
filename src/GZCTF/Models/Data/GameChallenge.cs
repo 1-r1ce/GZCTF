@@ -92,12 +92,12 @@ public class GameChallenge : Challenge
     public HashSet<Participation> Teams { get; set; } = [];
 
     /// <summary>
-    /// 比赛 Id
+    /// 练习 Id
     /// </summary>
     public int GameId { get; set; }
 
     /// <summary>
-    /// 比赛对象
+    /// 练习对象
     /// </summary>
     public Game Game { get; set; } = default!;
 

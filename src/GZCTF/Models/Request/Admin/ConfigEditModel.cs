@@ -18,7 +18,7 @@ public class ConfigEditModel
     public GlobalConfig? GlobalConfig { get; set; }
 
     /// <summary>
-    /// 比赛策略
+    /// 练习策略
     /// </summary>
     public ContainerPolicy? ContainerPolicy { get; set; }
 }

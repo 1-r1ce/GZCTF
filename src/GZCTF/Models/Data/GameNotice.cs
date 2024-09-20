@@ -7,7 +7,7 @@ using Microsoft.Extensions.Localization;
 namespace GZCTF.Models.Data;
 
 /// <summary>
-/// 比赛通知，会发往客户端。
+/// 练习通知，会发往客户端。
 /// 信息涵盖一二三血通知、提示发布通知、题目开启通知等
 /// </summary>
 [MemoryPackable]

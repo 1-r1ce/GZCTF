@@ -55,7 +55,7 @@ public interface ITeamRepository : IRepository
     public Task<Team[]> GetTeams(int count = 100, int skip = 0, CancellationToken token = default);
 
     /// <summary>
-    /// 是否有正在进行的比赛，比赛期间不允许进行人员变动
+    /// 是否有正在进行的练习，练习期间不允许进行人员变动
     /// </summary>
     /// <param name="team"></param>
     /// <param name="token"></param>

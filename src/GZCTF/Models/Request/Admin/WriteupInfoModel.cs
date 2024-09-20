@@ -4,7 +4,7 @@ using GZCTF.Models.Request.Info;
 namespace GZCTF.Models.Request.Admin;
 
 /// <summary>
-/// 比赛 Writeup 信息
+/// 练习 Writeup 信息
 /// </summary>
 public class WriteupInfoModel
 {

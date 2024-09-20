@@ -30,7 +30,7 @@ public interface IExerciseChallengeRepository : IRepository
     /// <summary>
     /// 更新附件
     /// </summary>
-    /// <param name="exercise">比赛题目对象</param>
+    /// <param name="exercise">练习题目对象</param>
     /// <param name="model">附件信息</param>
     /// <param name="token"></param>
     /// <returns></returns>

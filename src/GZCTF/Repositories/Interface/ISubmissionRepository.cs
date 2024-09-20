@@ -3,9 +3,9 @@
 public interface ISubmissionRepository : IRepository
 {
     /// <summary>
-    /// 获取比赛的提交，按时间降序
+    /// 获取练习的提交，按时间降序
     /// </summary>
-    /// <param name="game">比赛对象</param>
+    /// <param name="game">练习对象</param>
     /// <param name="type">提交类型</param>
     /// <param name="count">数量</param>
     /// <param name="skip">跳过数量</param>
@@ -62,7 +62,7 @@ public interface ISubmissionRepository : IRepository
     /// <summary>
     /// 获取提交
     /// </summary>
-    /// <param name="gameId">比赛Id</param>
+    /// <param name="gameId">练习Id</param>
     /// <param name="challengeId">题目Id</param>
     /// <param name="userId">用户Id</param>
     /// <param name="submitId">提交Id</param>

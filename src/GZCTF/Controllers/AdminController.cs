@@ -602,7 +602,7 @@ public class AdminController(
     /// <response code="200">更新成功</response>
     /// <response code="401">未授权用户</response>
     /// <response code="403">禁止访问</response>
-    /// <response code="404">比赛未找到</response>
+    /// <response code="404">练习未找到</response>
     [HttpGet("Writeups/{id:int}")]
     [ProducesResponseType(typeof(WriteupInfoModel[]), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]
@@ -626,7 +626,7 @@ public class AdminController(
     /// <response code="200">下载成功</response>
     /// <response code="401">未授权用户</response>
     /// <response code="403">禁止访问</response>
-    /// <response code="404">比赛未找到</response>
+    /// <response code="404">练习未找到</response>
     [HttpGet("Writeups/{id:int}/All")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RequestResponse), StatusCodes.Status404NotFound)]

@@ -53,7 +53,7 @@ public static class Limits
     public const int FileHashLength = 64;
 
     /// <summary>
-    /// 比赛公私钥长度
+    /// 练习公私钥长度
     /// </summary>
     public const int GameKeyLength = 63;
 
