@@ -214,27 +214,12 @@ const Home: FC = () => {
                     <div className='centent-medal-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
-                    奖项设置
-                  </div>
-                </div>
-                <div className='centent-medal-centent'>
-                  <div className='centent-medal-centent-detail'>
-                    <span>新生赛道：一等奖1名/二等奖9名/三等奖18名</span>     <span className='centent-medal-centent-detail-tow'>公开赛道：一等奖1名/二等奖9名/三等奖18名</span>
-                  </div>
-                </div>
-              </div>
-              <div className='centent-introduce'>
-                <div className='centent-introduce-top'>
-                  <div className='centent-introduce-icon'>
-                    <div className='centent-match-icon-img'></div>
-                  </div>
-                  <div className='centent-introduce-name'>
                     相关说明
                   </div>
                 </div>
                 <div className='centent-match-centent'>
                   <div className='centent-match-centent-detail'>
-                    <div>1. 禁止所有破坏练习公平公正的行为，包括但不限于：私自公开发布解题思路、传播flag、对练习平台及选手进行攻击，一经发现将被取消练习资格。</div>
+                    <div>1. 禁止所有破坏练习公平公正的行为，包括但不限于：私自传播flag、对练习平台及选手进行攻击，一经发现将被取消练习资格。</div>
                     <div>2. 本次练习面向所有受邀请用户，可联系管理员获得邀请码参加练习。</div>
                     <div>3. 依照 AGPLv3在&nbsp;&lt; https://github.com/1-r1ce/GZCTF &gt;&nbsp;开源。 </div>
                     <div>4. 本平台的最终解释权归本人所有。</div>
@@ -252,8 +237,8 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-company-centent'>
                   <div className='centent-company-centent-detail'>
-                    QQ：3300704130
-                    Email：rekir@qq.com
+                    交流qq群：7894561230 <br>
+                    联系邮箱：rekir@qq.com
                   </div>
                 </div>
               </div>
@@ -335,13 +320,13 @@ const Home: FC = () => {
                         <div className='communication-centent-img1'></div>
                         <div className='communication-centent-text'>
                           <div>交流qq群</div>
-                          <div>还没用没有</div>
+                          <div>还没有</div>
                         </div>
                       </div>
                       <div style={{ display: "flex", alignItems: 'center' }}>
                         <div className='communication-centent-img2'></div>
                         <div className='communication-centent-text'>
-                          <div>管理员邮箱</div>
+                          <div>联系邮箱</div>
                           <div>rekir@qq.com</div>
                         </div>
                       </div>
