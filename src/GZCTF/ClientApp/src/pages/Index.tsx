@@ -172,7 +172,7 @@ const Home: FC = () => {
           <div className="centent">
             <div className="titleCenter">
               <div className='titleBg'></div>
-              <div>练习须知</div>
+              <div>使用须知</div>
             </div>
             <div>
               <div style={{ marginTop: "50px" }} className='centent-introduce'>
@@ -181,11 +181,12 @@ const Home: FC = () => {
                     <div className='centent-introduce-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
-                    练习介绍
+                    平台介绍
                   </div>
                 </div>
                 <div className='centent-introduce-centent'>
-                  <div className='centent-introduce-centent-detail'>2024 SnigeCTF 网络安全挑战赛是由山东源鲁信息科技有限公司举办的网络安全公开赛事，采用线上CTF解题赛的形式进行。大赛旨在为高校学生提供展示才华和交流学习的平台，重点考核参赛选手的实战能力，致力于发现和培养网络安全领域的高、精、尖人才。</div>
+                  <div className='centent-introduce-centent-detail'>SnigeCTF 网络安全练习平台是一个内部使用的网络安全练习平台，采用线上CTF解题的形式进行。本平台旨在为网络安全爱好者提供一个高质量的练习环境，通过各种挑战帮助用户提升实战技能和应对网络威胁的能力。无论是初学者还是各位大佬，希望你能够在这里找到适合自己的挑战，一起交流经验，提升技能。
+                  </div>
                 </div>
               </div>
               <div className='centent-introduce'>
@@ -194,16 +195,15 @@ const Home: FC = () => {
                     <div className='centent-format-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
-                    赛制信息
+                    报名方式
                   </div>
                 </div>
                 <div className='centent-format-centent'>
                   <div className='centent-format-centent-detail'>
-                    <div>练习时间：10月10日-10月23日</div>
-                    <div>报名时间：09月01日-10月23日（练习期间可随时报名参赛）</div>
-                    <div>练习方式：线上个人赛</div>
+                    <div>练习时间：2024年10月1日-2026年1月1日</div>
+                    <div>报名时间：2024年10月1日-2026年1月1日（练习期间可随时报名参加）</div>
+                    <div>练习方式：线上个人/团队赛</div>
                     <div>练习方向：Web/Re/Pwn/Crypto/Misc</div>
-                    <div>练习赛道：本次练习设立新生赛道与公开赛道，采用相同的练习题目，并分别设立奖项。</div>
                     <div>排名机制：采用动态积分制，按照积分从高到低排名，两队相同积分时以先达到该积分的先后顺序排名。</div>
                   </div>
                 </div>
@@ -229,16 +229,15 @@ const Home: FC = () => {
                     <div className='centent-match-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
-                    赛事声明
+                    相关说明
                   </div>
                 </div>
                 <div className='centent-match-centent'>
                   <div className='centent-match-centent-detail'>
-                    <div>1. 禁止所有破坏练习公平公正的行为，包括但不限于：练习结束前公开平台发布解题思路、传播flag、对练习平台及参赛选手进行攻击，一经发现将被取消练习资格。</div>
-                    <div>2. 本次练习面向全国各大高校，获奖选手需提供相关在校证明材料，否则取消其获奖资格，名额顺延。</div>
-                    <div>3. 参赛选手需在练习结束后指定时间内提交WriteUP，不按照要求提交WriteUP者视为放弃此次成绩。 </div>
-                    <div>4. 依照 AGPLv3在&nbsp;&lt; https://github.com/YuanlooSec/GZCTF &gt;&nbsp;开源。 </div>
-                    <div>5. 赛事的最终解释权归山东源鲁信息科技有限公司所有。</div>
+                    <div>1. 禁止所有破坏练习公平公正的行为，包括但不限于：私自公开发布解题思路、传播flag、对练习平台及选手进行攻击，一经发现将被取消练习资格。</div>
+                    <div>2. 本次练习面向所有受邀请用户，可联系管理员获得邀请码参加练习。</div>
+                    <div>3. 依照 AGPLv3在&nbsp;&lt; https://github.com/1-r1ce/GZCTF &gt;&nbsp;开源。 </div>
+                    <div>4. 本平台的最终解释权归本人所有。</div>
                   </div>
                 </div>
               </div>
@@ -248,12 +247,13 @@ const Home: FC = () => {
                     <div className='centent-company-icon-img'></div>
                   </div>
                   <div className='centent-introduce-name'>
-                    主办单位
+                    联系方式
                   </div>
                 </div>
                 <div className='centent-company-centent'>
                   <div className='centent-company-centent-detail'>
-                    山东源鲁信息科技有限公司
+                    QQ：3300704130
+                    Email：rekir@qq.com
                   </div>
                 </div>
               </div>
@@ -328,21 +328,21 @@ const Home: FC = () => {
                   </div>
                   <div className='communication'>
                     <div>
-                      赛事交流：
+                      学习交流：
                     </div>
                     <div className='communication-centent'>
                       <div style={{ display: "flex", alignItems: 'center' }}>
                         <div className='communication-centent-img1'></div>
                         <div className='communication-centent-text'>
-                          <div>赛事qq群</div>
-                          <div>437096728</div>
+                          <div>交流qq群</div>
+                          <div>还没用没有</div>
                         </div>
                       </div>
                       <div style={{ display: "flex", alignItems: 'center' }}>
                         <div className='communication-centent-img2'></div>
                         <div className='communication-centent-text'>
-                          <div>赛事组邮箱</div>
-                          <div>ctf@yuanloo.com</div>
+                          <div>管理员邮箱</div>
+                          <div>rekir@qq.com</div>
                         </div>
                       </div>
                     </div>
