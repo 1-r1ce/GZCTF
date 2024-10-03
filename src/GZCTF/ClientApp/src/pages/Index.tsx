@@ -200,8 +200,8 @@ const Home: FC = () => {
                 </div>
                 <div className='centent-format-centent'>
                   <div className='centent-format-centent-detail'>
-                    <div>练习时间：2024年10月1日-2026年1月1日</div>
-                    <div>报名时间：2024年10月1日-2026年1月1日（练习期间可随时报名参加）</div>
+                    <div>练习时间：任意时间均可练习</div>
+                    <div>报名时间：任意时间均可报名</div>
                     <div>练习方式：线上个人/团队赛</div>
                     <div>练习方向：Web/Re/Pwn/Crypto/Misc</div>
                     <div>排名机制：采用动态积分制，按照积分从高到低排名，两队相同积分时以先达到该积分的先后顺序排名。</div>
