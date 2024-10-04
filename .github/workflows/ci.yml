@@ -82,7 +82,7 @@ jobs:
         with:
           images: |
             ghcr.io/${{ github.repository }}/gzctf
-            crpi-l44nqyl4tzz1hlj7.cn-hangzhou.personal.cr.aliyuncs.com/gzctf
+            crpi-l44nqyl4tzz1hlj7.cn-hangzhou.personal.cr.aliyuncs.com/r1ce/sgzctf
           flavor: |
             latest=${{ env.RELEASE }}
           tags: |
